@@ -1,12 +1,12 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
--- Date        : Mon Apr 28 15:24:17 2025
+-- Date        : Sat May 10 21:22:05 2025
 -- Host        : SHT running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub c:/Users/15755/CPU/CPU.srcs/sources_1/ip/RAM/RAM_stub.vhdl
 -- Design      : RAM
 -- Purpose     : Stub declaration of top-level module interface
--- Device      : xc7a35tcsg325-1
+-- Device      : xc7a35tcsg324-1
 -- --------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;

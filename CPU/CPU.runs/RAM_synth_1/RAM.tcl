@@ -18,7 +18,7 @@ proc create_report { reportName command } {
 }
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
-create_project -in_memory -part xc7a35tcsg325-1
+create_project -in_memory -part xc7a35tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
@@ -49,7 +49,7 @@ set cached_ip [config_ip_cache -export -no_bom -use_project_ipc -dir C:/Users/15
 
 if { $cached_ip eq {} } {
 
-synth_design -top RAM -part xc7a35tcsg325-1 -mode out_of_context
+synth_design -top RAM -part xc7a35tcsg324-1 -mode out_of_context
 
 #---------------------------------------------------------
 # Generate Checkpoint/Stub/Simulation Files For IP Cache
