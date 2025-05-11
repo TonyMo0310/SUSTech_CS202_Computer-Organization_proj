@@ -30,7 +30,7 @@ set_property target_language Verilog [current_project]
 set_property ip_output_repo c:/Users/15755/SUSTech_CS202_Computer-Organization_proj/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 add_files C:/Users/15755/SUSTech_CS202_Computer-Organization_proj/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/RAM/dmem32.coe
-add_files c:/Users/15755/SUSTech_CS202_Computer-Organization_proj/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/prgrom/prgrom32.coe
+add_files C:/Users/15755/SUSTech_CS202_Computer-Organization_proj/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/prgrom/prgrom32.coe
 read_verilog -library xil_defaultlib {
   C:/Users/15755/SUSTech_CS202_Computer-Organization_proj/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/imports/Downloads/ALU.v
   C:/Users/15755/SUSTech_CS202_Computer-Organization_proj/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/new/CPU_state.v
@@ -48,7 +48,7 @@ read_verilog -library xil_defaultlib {
 read_ip -quiet C:/Users/15755/SUSTech_CS202_Computer-Organization_proj/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/RAM/RAM.xci
 set_property used_in_implementation false [get_files -all c:/Users/15755/SUSTech_CS202_Computer-Organization_proj/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/RAM/RAM_ooc.xdc]
 
-read_ip -quiet c:/Users/15755/SUSTech_CS202_Computer-Organization_proj/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/prgrom/prgrom.xci
+read_ip -quiet C:/Users/15755/SUSTech_CS202_Computer-Organization_proj/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/prgrom/prgrom.xci
 set_property used_in_implementation false [get_files -all c:/Users/15755/SUSTech_CS202_Computer-Organization_proj/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/prgrom/prgrom_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
