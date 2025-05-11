@@ -22,5 +22,9 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CS202 Computer organization/CPU/
 INFO: [VRFC 10-311] analyzing module regWriteMUX
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CS202 Computer organization/CPU/CPU/CPU.srcs/sources_1/imports/new/registers.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module registers
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CS202 Computer organization/CPU/CPU/CPU.srcs/sources_1/new/sevenSegmentDisplay.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sevenSegmentDisplay
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CS202 Computer organization/CPU/CPU/CPU.srcs/sources_1/new/switchInput.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module switchInput
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CS202 Computer organization/CPU/CPU/CPU.srcs/sim_1/new/tb_CPU_top.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module tb_CPU_top

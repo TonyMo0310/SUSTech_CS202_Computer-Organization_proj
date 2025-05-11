@@ -3,7 +3,7 @@ Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
 Running: C:/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto af055d75d14946949e7980ab34c1ff68 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_1 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_CPU_top_behav xil_defaultlib.tb_CPU_top xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
-WARNING: [VRFC 10-1783] select index 62 into current_contents is out of bounds [D:/CS202 Computer organization/CPU/CPU/CPU.ip_user_files/ipstatic/simulation/blk_mem_gen_v8_4.v:2420]
+WARNING: [VRFC 10-1783] select index 62 into current_contents is out of bounds [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_4/simulation/blk_mem_gen_v8_4.v:2420]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
@@ -25,6 +25,8 @@ Compiling module xil_defaultlib.RAM
 Compiling module xil_defaultlib.DataMem
 Compiling module xil_defaultlib.CPU_state
 Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.sevenSegmentDisplay
+Compiling module xil_defaultlib.switchInput
 Compiling module xil_defaultlib.CPU_top
 Compiling module xil_defaultlib.tb_CPU_top
 Compiling module xil_defaultlib.glbl
