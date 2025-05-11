@@ -61,7 +61,9 @@ module CPU_top(
         .zero(zero),          
         .imm32(imm),
         .pc(pc),        
-        .instruction(instruction)  
+        .instruction(instruction),
+        .IFen(IFen)
+          
     );
     // ÊµÀý»¯ decoder Ä£¿é
     decoder decoder (
