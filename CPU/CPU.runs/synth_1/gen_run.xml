@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcsg324-1" LaunchTime="1746883341">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcsg324-1" LaunchTime="1746948259">
   <File Type="PA-TCL" Name="CPU_top.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="CPU_top_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="CPU_top_reports.tcl"/>
   <File Type="RDS-RDS" Name="CPU_top.vds"/>
   <File Type="RDS-UTIL" Name="CPU_top_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="CPU_top_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="CPU_top.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="CPU_top_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="CPU_top_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/imports/Downloads/ALU.v">
@@ -83,6 +86,20 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/sevenSegmentDisplay.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/switchInput.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/CPU_top.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -91,6 +108,12 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/ip/RAM/dmem32.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/prgrom/prgrom32.coe">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -118,6 +141,6 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="prgrom"/>
   <BlockFileSet Type="BlockSrcs" Name="RAM"/>
+  <BlockFileSet Type="BlockSrcs" Name="prgrom"/>
 </GenRun>

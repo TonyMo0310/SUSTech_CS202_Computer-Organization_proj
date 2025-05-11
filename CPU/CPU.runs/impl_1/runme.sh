@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/15755/CPU/CPU.runs/impl_1'
+HD_PWD='C:/Users/15755/SUSTech_CS202_Computer-Organization_proj/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

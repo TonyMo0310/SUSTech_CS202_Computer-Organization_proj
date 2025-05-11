@@ -21,7 +21,12 @@
 
 module CPU_top(
     input clk,
-    input rst
+    input rst,
+    output [7:0]seg,
+    output [7:0]seg1,
+    output [7:0]an,
+    input [7:0]sw,
+    input [1:0]choose
     );
     wire branch;
     wire zero;
@@ -124,6 +129,24 @@ module CPU_top(
         .pc(pc),
         .ALUResult(ALUResult),
         .zero(zero)
+    );
+    
+    // 七段显示模块实例化
+    sevenSegmentDisplay sevenSegmentDisplay (
+        .clk     (clk),      // 输入时钟信号
+        .rst     (rst),      // 输入复位信号
+        .IOout   (IOout),    // 32位输入数据（8个4位数字）
+        .seg     (seg),      // 输出段选线0-7（控制第一组七段显示）
+        .seg1    (seg1),     // 输出段选线0-7（控制第二组七段显示，若使用多组则扩展）
+        .an      (an)        // 阳极选择信号（通过扫描控制不同位的显示）
+    );
+    //开关输入
+    switchInput switchInput (
+        .clk     (clk),      // 输入时钟信号，触发写入操作
+        .rst     (rst),      // 异步复位（低电平有效），清空IOin
+        .sw      (sw),       // 8位开关输入值
+        .choose  (choose),   // 2位选择信号（决定sw被写入的字节段）
+        .IOin    (IOin)      // 输出32位数据总线，根据choose选择性加载sw到特定位置
     );
     
     // 连接 address

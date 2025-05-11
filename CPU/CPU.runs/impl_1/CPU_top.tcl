@@ -68,15 +68,15 @@ set rc [catch {
   create_project -in_memory -part xc7a35tcsg324-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/Users/15755/CPU/CPU.cache/wt [current_project]
-  set_property parent.project_path C:/Users/15755/CPU/CPU.xpr [current_project]
-  set_property ip_output_repo C:/Users/15755/CPU/CPU.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/Users/15755/SUSTech_CS202_Computer-Organization_proj/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.cache/wt [current_project]
+  set_property parent.project_path C:/Users/15755/SUSTech_CS202_Computer-Organization_proj/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.xpr [current_project]
+  set_property ip_output_repo C:/Users/15755/SUSTech_CS202_Computer-Organization_proj/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES XPM_MEMORY [current_project]
-  add_files -quiet C:/Users/15755/CPU/CPU.runs/synth_1/CPU_top.dcp
-  read_ip -quiet C:/Users/15755/CPU/CPU.srcs/sources_1/ip/prgrom/prgrom.xci
-  read_ip -quiet c:/Users/15755/CPU/CPU.srcs/sources_1/ip/RAM/RAM.xci
-  read_xdc C:/Users/15755/CPU/CPU.srcs/constrs_1/new/CPUconstaint.xdc
+  add_files -quiet C:/Users/15755/SUSTech_CS202_Computer-Organization_proj/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.runs/synth_1/CPU_top.dcp
+  read_ip -quiet C:/Users/15755/SUSTech_CS202_Computer-Organization_proj/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/RAM/RAM.xci
+  read_ip -quiet c:/Users/15755/SUSTech_CS202_Computer-Organization_proj/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/prgrom/prgrom.xci
+  read_xdc C:/Users/15755/SUSTech_CS202_Computer-Organization_proj/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/constrs_1/new/CPUconstaint.xdc
   link_design -top CPU_top -part xc7a35tcsg324-1
   close_msg_db -file init_design.pb
 } RESULT]
