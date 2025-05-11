@@ -1,0 +1,18 @@
+0.6
+2017.4
+Dec 15 2017
+21:07:18
+D:/CS202 Computer organization/CPU/CPU/CPU.sim/sim_1/behav/xsim/glbl.v,1513215259,verilog,,,,glbl,,,,,,,,
+D:/CS202 Computer organization/CPU/CPU/CPU.srcs/sim_1/new/tb_CPU_top.v,1746941892,verilog,,,,tb_CPU_top,,,,,,,,
+D:/CS202 Computer organization/CPU/CPU/CPU.srcs/sources_1/imports/Downloads/ALU.v,1746935837,verilog,,D:/CS202 Computer organization/CPU/CPU/CPU.srcs/sources_1/new/CPU_state.v,,ALU,,,,,,,,
+D:/CS202 Computer organization/CPU/CPU/CPU.srcs/sources_1/imports/Downloads/IFetch.v,1746878385,verilog,,D:/CS202 Computer organization/CPU/CPU/CPU.srcs/sources_1/imports/new/control.v,,IFetch,,,,,,,,
+D:/CS202 Computer organization/CPU/CPU/CPU.srcs/sources_1/imports/new/control.v,1746878385,verilog,,D:/CS202 Computer organization/CPU/CPU/CPU.srcs/sources_1/imports/new/decoder.v,,control,,,,,,,,
+D:/CS202 Computer organization/CPU/CPU/CPU.srcs/sources_1/imports/new/decoder.v,1746878385,verilog,,D:/CS202 Computer organization/CPU/CPU/CPU.srcs/sources_1/imports/new/immGen.v,,decoder,,,,,,,,
+D:/CS202 Computer organization/CPU/CPU/CPU.srcs/sources_1/imports/new/immGen.v,1746878385,verilog,,D:/CS202 Computer organization/CPU/CPU/CPU.srcs/sources_1/new/regWriteMUX.v,,immGen,,,,,,,,
+D:/CS202 Computer organization/CPU/CPU/CPU.srcs/sources_1/imports/new/registers.v,1746878385,verilog,,D:/CS202 Computer organization/CPU/CPU/CPU.srcs/sim_1/new/tb_CPU_top.v,,registers,,,,,,,,
+D:/CS202 Computer organization/CPU/CPU/CPU.srcs/sources_1/ip/RAM/sim/RAM.v,1746896562,verilog,,D:/CS202 Computer organization/CPU/CPU/CPU.srcs/sources_1/ip/prgrom/sim/prgrom.v,,RAM,,,,,,,,
+D:/CS202 Computer organization/CPU/CPU/CPU.srcs/sources_1/ip/prgrom/sim/prgrom.v,1746878386,verilog,,D:/CS202 Computer organization/CPU/CPU/CPU.srcs/sources_1/imports/Downloads/ALU.v,,prgrom,,,,,,,,
+D:/CS202 Computer organization/CPU/CPU/CPU.srcs/sources_1/new/CPU_state.v,1746878386,verilog,,D:/CS202 Computer organization/CPU/CPU/CPU.srcs/sources_1/new/CPU_top.v,,CPU_state,,,,,,,,
+D:/CS202 Computer organization/CPU/CPU/CPU.srcs/sources_1/new/CPU_top.v,1746941208,verilog,,D:/CS202 Computer organization/CPU/CPU/CPU.srcs/sources_1/new/DataMem.v,,CPU_top,,,,,,,,
+D:/CS202 Computer organization/CPU/CPU/CPU.srcs/sources_1/new/DataMem.v,1746941379,verilog,,D:/CS202 Computer organization/CPU/CPU/CPU.srcs/sources_1/imports/Downloads/IFetch.v,,DataMem,,,,,,,,
+D:/CS202 Computer organization/CPU/CPU/CPU.srcs/sources_1/new/regWriteMUX.v,1746878386,verilog,,D:/CS202 Computer organization/CPU/CPU/CPU.srcs/sources_1/imports/new/registers.v,,regWriteMUX,,,,,,,,

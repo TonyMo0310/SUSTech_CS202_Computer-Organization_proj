@@ -9,7 +9,7 @@
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
-// Description: Supports lw, sw, lb, lh, sb, sh instructions
+// Description: Supports lw, sw, lb, lh, sb, sh, lbu, lhu instructions
 // 
 // Dependencies: 
 // 
@@ -37,7 +37,7 @@ module DataMem(
     reg [31:0] ramIn;              // Data input to RAM for write
     parameter IOaddress = 32'hFFFFFC00; // IO address
 
-    // Read logic: Handle word, byte, halfword reads
+    // Read logic: Handle word, byte, halfword reads (signed and unsigned)
     always @* begin
         if (address == IOaddress) begin
             readData = IOin;       // IO read (word only)
@@ -59,6 +59,20 @@ module DataMem(
                 end
                 3'b010: begin // lw: Load word
                     readData = ramOut;
+                end
+                3'b100: begin // lbu: Load byte with zero extension
+                    case (address[1:0])
+                        2'b00: readData = {24'b0, ramOut[7:0]};
+                        2'b01: readData = {24'b0, ramOut[15:8]};
+                        2'b10: readData = {24'b0, ramOut[23:16]};
+                        2'b11: readData = {24'b0, ramOut[31:24]};
+                    endcase
+                end
+                3'b101: begin // lhu: Load halfword with zero extension
+                    case (address[1])
+                        1'b0: readData = {16'b0, ramOut[15:0]};
+                        1'b1: readData = {16'b0, ramOut[31:16]};
+                    endcase
                 end
                 default: begin
                     readData = ramOut; // Default to word read
