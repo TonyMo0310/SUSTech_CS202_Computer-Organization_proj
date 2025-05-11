@@ -18,7 +18,8 @@ module decoder(
      .writeData(writeData[31:0]),       // input [31:0] writeData
      .readData1(readData1[31:0]),       // output reg [31:0] readData1
      .readData2(readData2[31:0]),       // output reg [31:0] readData2
-     .regWrite(regWrite)         // input regWrite
+     .regWrite(regWrite),         // input regWrite
+     .WBen(WBen)
  );
  immGen dut2 (
      .instruction(instruction[31:0]),     // input [31:0] instruction

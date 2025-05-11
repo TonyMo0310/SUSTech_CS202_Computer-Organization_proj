@@ -15,7 +15,7 @@
 // 
 // Revision:
 // Revision 0.01 - File Created
-// Additional Comments:这东西估计后面还得大改 :(
+// Additional Comments:这东西估计后面还得大�? :(
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
@@ -36,25 +36,26 @@ module ALU(
     reg [31:0] num1;
     reg [31:0] num2;
 
-    // 选择ALU操作数
+    // 选择ALU操作�?
     always @* begin
         if (ALUSrc) begin
-            num2 = imm32;  // 如果ALUSrc为1，使用立即数
+            num2 = imm32;  // 如果ALUSrc�?1，使用立即数
         end else begin
-            num2 = ReadData2;  // 否则使用寄存器值
+            num2 = ReadData2;  // 否则使用寄存器�??
         end
 
         if (PCtoALU) begin
-            num1 = pc;  // 如果PCtoALU为1，使用PC值
+            num1 = pc;  // 如果PCtoALU�?1，使用PC�?
         end else begin
-            num1 = ReadData1;  // 否则使用寄存器值
+            num1 = ReadData1;  // 否则使用寄存器�??
         end
     end
 
     // ALU操作
     always @* begin
         case (ALUOp)
-            2'b00: begin  // 加法或逻辑运算
+            2'b00: begin  // 加法或�?�辑运算
+                zero=1'b0;
                 case (funct3)
                     3'b000: ALUResult = num1 + num2;  // ADD
                     3'b001: ALUResult = num1 << num2[4:0];  // SLL
@@ -70,13 +71,14 @@ module ALU(
                     end
                     3'b110: ALUResult = num1 | num2;  // OR
                     3'b111: ALUResult = num1 & num2;  // AND
-                    default: ALUResult = 32'h0;
                 endcase
             end
             2'b01: begin  // 减法
+                zero=1'b0;
                 ALUResult = num1 - num2;  // SUB
             end
             2'b10: begin  // 比较
+                ALUResult=32'h0;
                 case (funct3)
                     3'b000: zero = (num1 == num2);  // BEQ
                     3'b001: zero = (num1 != num2);  // BNE

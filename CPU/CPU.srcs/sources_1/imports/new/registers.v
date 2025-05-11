@@ -18,8 +18,6 @@ begin
  if(!rst)begin
   for (i = 0; i < 32; i = i + 1)
    registers[i] <= 32'h0;
- readData1<=32'd0;
- readData2<=32'd0;
  end else begin
  if (regWrite&&WBen) begin   // 写使能有效时触发写入
   if (writeRegister != 5'd0)  // 排除对只读寄存器x0的修改
