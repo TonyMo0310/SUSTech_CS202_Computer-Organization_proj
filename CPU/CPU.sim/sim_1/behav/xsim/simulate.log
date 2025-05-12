@@ -10,3 +10,8 @@ Starting simulation at time 0 ns
 Initial IOin value: 0xa5a5a5a5
 Instruction memory loaded with           8 instructions
 Reset released at time 5000 ns
+7788 (expected 0x55667788)
+sw Test: address=0x00000000, writeData=0x99aabbcc (expected 0x99AABBCC)
+MMIO Read Test: address=0xfffffc00, readData=0xa5a5a5a5 (expected 0xA5A5A5A5)
+MMIO Write Test: address=0xfffffc00, IOout=0x00000000 (expected 0x12345678)
+$finish called at time : 240 ns : File "D:/CS202 Computer organization/CPU/CPU/CPU.srcs/sources_1/new/DataMem_tb.v" Line 196
