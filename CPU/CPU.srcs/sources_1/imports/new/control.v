@@ -86,7 +86,7 @@ module control(
         ALUop=2'b10;
         memWrite=1'b0;
         ALUsrc=1'b0;
-        regWrite=1'b0;
+        regWrite=1'b1;
         PCtoALU=1'b0;
         regtoPC=1'b0;
       end
