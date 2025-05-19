@@ -15,5 +15,5 @@ D:/CS202 Computer organization/CPU/CPU/CPU.srcs/sources_1/ip/prgrom/sim/prgrom.v
 D:/CS202 Computer organization/CPU/CPU/CPU.srcs/sources_1/new/CPU_state.v,1746878386,verilog,,D:/CS202 Computer organization/CPU/CPU/CPU.srcs/sources_1/new/CPU_top.v,,CPU_state,,,,,,,,
 D:/CS202 Computer organization/CPU/CPU/CPU.srcs/sources_1/new/CPU_top.v,1746941208,verilog,,D:/CS202 Computer organization/CPU/CPU/CPU.srcs/sources_1/new/DataMem.v,,CPU_top,,,,,,,,
 D:/CS202 Computer organization/CPU/CPU/CPU.srcs/sources_1/new/DataMem.v,1746941379,verilog,,D:/CS202 Computer organization/CPU/CPU/CPU.srcs/sources_1/new/DataMem_tb.v,,DataMem,,,,,,,,
-D:/CS202 Computer organization/CPU/CPU/CPU.srcs/sources_1/new/DataMem_tb.v,1747025825,verilog,,,,DataMem_tb,,,,,,,,
+D:/CS202 Computer organization/CPU/CPU/CPU.srcs/sources_1/new/DataMem_tb.v,1747632641,verilog,,,,DataMem_tb,,,,,,,,
 D:/CS202 Computer organization/CPU/CPU/CPU.srcs/sources_1/new/regWriteMUX.v,1746878386,verilog,,D:/CS202 Computer organization/CPU/CPU/CPU.srcs/sources_1/imports/new/registers.v,,regWriteMUX,,,,,,,,

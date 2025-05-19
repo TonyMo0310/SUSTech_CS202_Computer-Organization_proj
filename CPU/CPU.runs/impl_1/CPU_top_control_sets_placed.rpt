@@ -1,0 +1,105 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date         : Mon May 19 13:18:27 2025
+| Host         : LAPTOP-2HK4AVG5 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file CPU_top_control_sets_placed.rpt
+| Design       : CPU_top
+| Device       : xc7a35t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    41 |
+| Unused register locations in slices containing registers |    16 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               9 |            8 |
+| No           | No                    | Yes                    |              35 |            8 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |               4 |            2 |
+| Yes          | No                    | Yes                    |            1088 |          458 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++-------------------------------------+--------------------------------+-------------------------------------+------------------+----------------+
+|             Clock Signal            |          Enable Signal         |           Set/Reset Signal          | Slice Load Count | Bel Load Count |
++-------------------------------------+--------------------------------+-------------------------------------+------------------+----------------+
+|  sevenSegmentDisplay/divclk_reg_n_0 | rst_IBUF                       |                                     |                2 |              4 |
+|  clk_IBUF_BUFG                      | switchInput/p_0_in[7]          | decoder/dut1/registers_reg[1][31]_0 |                1 |              8 |
+|  clk_IBUF_BUFG                      | switchInput/p_0_in[15]         | decoder/dut1/registers_reg[1][31]_0 |                1 |              8 |
+|  clk_IBUF_BUFG                      | switchInput/IOin[31]_i_1_n_0   | decoder/dut1/registers_reg[1][31]_0 |                1 |              8 |
+|  clk_IBUF_BUFG                      | switchInput/p_0_in[23]         | decoder/dut1/registers_reg[1][31]_0 |                1 |              8 |
+|  clk_IBUF_BUFG                      |                                |                                     |                8 |              9 |
+|  sevenSegmentDisplay/divclk_reg_n_0 |                                | decoder/dut1/registers_reg[1][31]_0 |                3 |             11 |
+|  clk_IBUF_BUFG                      |                                | decoder/dut1/registers_reg[1][31]_0 |                5 |             24 |
+|  clk_IBUF_BUFG                      | ifetch/E[0]                    | decoder/dut1/registers_reg[1][31]_0 |                8 |             32 |
+|  clk_IBUF_BUFG                      | ifetch/registers_reg[10][0][0] | decoder/dut1/registers_reg[1][31]_0 |               15 |             32 |
+|  clk_IBUF_BUFG                      | ifetch/registers_reg[7][0][0]  | decoder/dut1/registers_reg[1][31]_0 |               13 |             32 |
+|  clk_IBUF_BUFG                      | ifetch/registers_reg[9][0][0]  | decoder/dut1/registers_reg[1][31]_0 |               15 |             32 |
+|  clk_IBUF_BUFG                      | ifetch/registers_reg[27][0][0] | decoder/dut1/registers_reg[1][31]_0 |               19 |             32 |
+|  clk_IBUF_BUFG                      | ifetch/registers_reg[29][0][0] | decoder/dut1/registers_reg[1][31]_0 |               11 |             32 |
+|  clk_IBUF_BUFG                      | ifetch/registers_reg[21][0][0] | decoder/dut1/registers_reg[1][31]_0 |               13 |             32 |
+|  clk_IBUF_BUFG                      | ifetch/registers_reg[31][0][0] | decoder/dut1/registers_reg[1][31]_0 |               13 |             32 |
+|  clk_IBUF_BUFG                      | ifetch/registers_reg[8][0][0]  | decoder/dut1/registers_reg[1][31]_0 |               15 |             32 |
+|  clk_IBUF_BUFG                      | ifetch/registers_reg[22][0][0] | decoder/dut1/registers_reg[1][31]_0 |               11 |             32 |
+|  clk_IBUF_BUFG                      | ifetch/registers_reg[3][0][0]  | decoder/dut1/registers_reg[1][31]_0 |               15 |             32 |
+|  clk_IBUF_BUFG                      | ifetch/registers_reg[13][0][0] | decoder/dut1/registers_reg[1][31]_0 |               12 |             32 |
+|  clk_IBUF_BUFG                      | ifetch/registers_reg[26][0][0] | decoder/dut1/registers_reg[1][31]_0 |               14 |             32 |
+|  clk_IBUF_BUFG                      | ifetch/registers_reg[12][0][0] | decoder/dut1/registers_reg[1][31]_0 |               14 |             32 |
+|  clk_IBUF_BUFG                      | ifetch/registers_reg[14][0][0] | decoder/dut1/registers_reg[1][31]_0 |               12 |             32 |
+|  clk_IBUF_BUFG                      | ifetch/registers_reg[18][0][0] | decoder/dut1/registers_reg[1][31]_0 |               14 |             32 |
+|  clk_IBUF_BUFG                      | ifetch/registers_reg[20][0][0] | decoder/dut1/registers_reg[1][31]_0 |               15 |             32 |
+|  clk_IBUF_BUFG                      | ifetch/registers_reg[24][0][0] | decoder/dut1/registers_reg[1][31]_0 |               15 |             32 |
+|  clk_IBUF_BUFG                      | ifetch/registers_reg[4][0][0]  | decoder/dut1/registers_reg[1][31]_0 |               13 |             32 |
+|  clk_IBUF_BUFG                      | ifetch/registers_reg[15][0][0] | decoder/dut1/registers_reg[1][31]_0 |               12 |             32 |
+|  clk_IBUF_BUFG                      | ifetch/registers_reg[1][0][0]  | decoder/dut1/registers_reg[1][31]_0 |               16 |             32 |
+|  clk_IBUF_BUFG                      | ifetch/registers_reg[6][0][0]  | decoder/dut1/registers_reg[1][31]_0 |               13 |             32 |
+|  clk_IBUF_BUFG                      | ifetch/registers_reg[16][0][0] | decoder/dut1/registers_reg[1][31]_0 |               15 |             32 |
+|  clk_IBUF_BUFG                      | ifetch/registers_reg[19][0][0] | decoder/dut1/registers_reg[1][31]_0 |               11 |             32 |
+|  clk_IBUF_BUFG                      | ifetch/registers_reg[5][0][0]  | decoder/dut1/registers_reg[1][31]_0 |               17 |             32 |
+|  clk_IBUF_BUFG                      | ifetch/registers_reg[11][0][0] | decoder/dut1/registers_reg[1][31]_0 |               15 |             32 |
+|  clk_IBUF_BUFG                      | ifetch/registers_reg[30][0][0] | decoder/dut1/registers_reg[1][31]_0 |               14 |             32 |
+|  clk_IBUF_BUFG                      | ifetch/registers_reg[2][0][0]  | decoder/dut1/registers_reg[1][31]_0 |               16 |             32 |
+|  clk_IBUF_BUFG                      | cpu_state/out[0]               | decoder/dut1/registers_reg[1][31]_0 |                8 |             32 |
+|  clk_IBUF_BUFG                      | ifetch/registers_reg[25][0][0] | decoder/dut1/registers_reg[1][31]_0 |               16 |             32 |
+|  clk_IBUF_BUFG                      | ifetch/registers_reg[17][0][0] | decoder/dut1/registers_reg[1][31]_0 |               13 |             32 |
+|  clk_IBUF_BUFG                      | ifetch/registers_reg[28][0][0] | decoder/dut1/registers_reg[1][31]_0 |               14 |             32 |
+|  clk_IBUF_BUFG                      | ifetch/registers_reg[23][0][0] | decoder/dut1/registers_reg[1][31]_0 |               17 |             32 |
++-------------------------------------+--------------------------------+-------------------------------------+------------------+----------------+
+
+
++--------+-----------------------+
+| Fanout | Number of ControlSets |
++--------+-----------------------+
+| 4      |                     1 |
+| 8      |                     4 |
+| 9      |                     1 |
+| 11     |                     1 |
+| 16+    |                    34 |
++--------+-----------------------+
+
+

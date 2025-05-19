@@ -22,34 +22,34 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir C:/Users/15755/SUSTech_CS202_Computer-Organization_proj/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.cache/wt [current_project]
-set_property parent.project_path C:/Users/15755/SUSTech_CS202_Computer-Organization_proj/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.xpr [current_project]
+set_property webtalk.parent_dir {D:/CS202 Computer organization/CPU/CPU/CPU.cache/wt} [current_project]
+set_property parent.project_path {D:/CS202 Computer organization/CPU/CPU/CPU.xpr} [current_project]
 set_property XPM_LIBRARIES XPM_MEMORY [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo c:/Users/15755/SUSTech_CS202_Computer-Organization_proj/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.cache/ip [current_project]
+set_property ip_output_repo {d:/CS202 Computer organization/CPU/CPU/CPU.cache/ip} [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-add_files C:/Users/15755/SUSTech_CS202_Computer-Organization_proj/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/RAM/dmem32.coe
-add_files C:/Users/15755/SUSTech_CS202_Computer-Organization_proj/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/prgrom/prgrom32.coe
+add_files {{D:/CS202 Computer organization/CPU/CPU/CPU.srcs/sources_1/ip/RAM/dmem32.coe}}
+add_files {{D:/CS202 Computer organization/CPU/CPU/CPU.srcs/sources_1/ip/prgrom/prgrom32.coe}}
 read_verilog -library xil_defaultlib {
-  C:/Users/15755/SUSTech_CS202_Computer-Organization_proj/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/imports/Downloads/ALU.v
-  C:/Users/15755/SUSTech_CS202_Computer-Organization_proj/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/new/CPU_state.v
-  C:/Users/15755/SUSTech_CS202_Computer-Organization_proj/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/new/DataMem.v
-  C:/Users/15755/SUSTech_CS202_Computer-Organization_proj/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/imports/Downloads/IFetch.v
-  C:/Users/15755/SUSTech_CS202_Computer-Organization_proj/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/imports/new/control.v
-  C:/Users/15755/SUSTech_CS202_Computer-Organization_proj/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/imports/new/decoder.v
-  C:/Users/15755/SUSTech_CS202_Computer-Organization_proj/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/imports/new/immGen.v
-  C:/Users/15755/SUSTech_CS202_Computer-Organization_proj/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/new/regWriteMUX.v
-  C:/Users/15755/SUSTech_CS202_Computer-Organization_proj/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/imports/new/registers.v
-  C:/Users/15755/SUSTech_CS202_Computer-Organization_proj/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/new/sevenSegmentDisplay.v
-  C:/Users/15755/SUSTech_CS202_Computer-Organization_proj/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/new/switchInput.v
-  C:/Users/15755/SUSTech_CS202_Computer-Organization_proj/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/new/CPU_top.v
+  {D:/CS202 Computer organization/CPU/CPU/CPU.srcs/sources_1/imports/Downloads/ALU.v}
+  {D:/CS202 Computer organization/CPU/CPU/CPU.srcs/sources_1/new/CPU_state.v}
+  {D:/CS202 Computer organization/CPU/CPU/CPU.srcs/sources_1/new/DataMem.v}
+  {D:/CS202 Computer organization/CPU/CPU/CPU.srcs/sources_1/imports/Downloads/IFetch.v}
+  {D:/CS202 Computer organization/CPU/CPU/CPU.srcs/sources_1/imports/new/control.v}
+  {D:/CS202 Computer organization/CPU/CPU/CPU.srcs/sources_1/imports/new/decoder.v}
+  {D:/CS202 Computer organization/CPU/CPU/CPU.srcs/sources_1/imports/new/immGen.v}
+  {D:/CS202 Computer organization/CPU/CPU/CPU.srcs/sources_1/new/regWriteMUX.v}
+  {D:/CS202 Computer organization/CPU/CPU/CPU.srcs/sources_1/imports/new/registers.v}
+  {D:/CS202 Computer organization/CPU/CPU/CPU.srcs/sources_1/new/sevenSegmentDisplay.v}
+  {D:/CS202 Computer organization/CPU/CPU/CPU.srcs/sources_1/new/switchInput.v}
+  {D:/CS202 Computer organization/CPU/CPU/CPU.srcs/sources_1/new/CPU_top.v}
 }
-read_ip -quiet C:/Users/15755/SUSTech_CS202_Computer-Organization_proj/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/RAM/RAM.xci
-set_property used_in_implementation false [get_files -all c:/Users/15755/SUSTech_CS202_Computer-Organization_proj/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/RAM/RAM_ooc.xdc]
+read_ip -quiet {{D:/CS202 Computer organization/CPU/CPU/CPU.srcs/sources_1/ip/RAM/RAM.xci}}
+set_property used_in_implementation false [get_files -all {{d:/CS202 Computer organization/CPU/CPU/CPU.srcs/sources_1/ip/RAM/RAM_ooc.xdc}}]
 
-read_ip -quiet C:/Users/15755/SUSTech_CS202_Computer-Organization_proj/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/prgrom/prgrom.xci
-set_property used_in_implementation false [get_files -all c:/Users/15755/SUSTech_CS202_Computer-Organization_proj/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/prgrom/prgrom_ooc.xdc]
+read_ip -quiet {{D:/CS202 Computer organization/CPU/CPU/CPU.srcs/sources_1/ip/prgrom/prgrom.xci}}
+set_property used_in_implementation false [get_files -all {{d:/CS202 Computer organization/CPU/CPU/CPU.srcs/sources_1/ip/prgrom/prgrom_ooc.xdc}}]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -59,9 +59,11 @@ set_property used_in_implementation false [get_files -all c:/Users/15755/SUSTech
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/15755/SUSTech_CS202_Computer-Organization_proj/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/constrs_1/new/CPUconstaint.xdc
-set_property used_in_implementation false [get_files C:/Users/15755/SUSTech_CS202_Computer-Organization_proj/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/constrs_1/new/CPUconstaint.xdc]
+read_xdc {{D:/CS202 Computer organization/CPU/CPU/CPU.srcs/constrs_1/new/CPUconstaint.xdc}}
+set_property used_in_implementation false [get_files {{D:/CS202 Computer organization/CPU/CPU/CPU.srcs/constrs_1/new/CPUconstaint.xdc}}]
 
+read_xdc dont_touch.xdc
+set_property used_in_implementation false [get_files dont_touch.xdc]
 
 synth_design -top CPU_top -part xc7a35tcsg324-1
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcsg324-1" LaunchTime="1746958572">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcsg324-1" LaunchTime="1747631260">
   <File Type="PA-TCL" Name="CPU_top.tcl"/>
   <File Type="REPORTS-TCL" Name="CPU_top_reports.tcl"/>
   <File Type="RDS-RDS" Name="CPU_top.vds"/>
@@ -8,6 +8,13 @@
   <File Type="RDS-DCP" Name="CPU_top.dcp"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/ip/RAM/RAM.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/imports/Downloads/ALU.v">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../Downloads/ALU.v"/>
@@ -116,6 +123,14 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/DataMem_tb.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="CPU_top"/>
@@ -138,6 +153,5 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="RAM"/>
   <BlockFileSet Type="BlockSrcs" Name="prgrom"/>
 </GenRun>
