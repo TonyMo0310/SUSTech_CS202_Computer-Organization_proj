@@ -1,8 +1,8 @@
-# ±÷”∫Õ÷ÿ÷√
+#Êó∂ÈíüÂíåÈáçÁΩÆ
 set_property -dict {PACKAGE_PIN P17 IOSTANDARD LVCMOS33} [get_ports clk ]
 set_property -dict {PACKAGE_PIN P15 IOSTANDARD LVCMOS33} [get_ports rst ]
-create_clock -period 10.000 -name clk [get_ports clk]
-#∆ﬂ∂Œ ˝¬Îπ‹
+create_clock -period 20.000 -name clk [get_ports clk]
+#‰∏ÉÊÆµÊï∞Á†ÅÁÆ°
 set_property -dict {PACKAGE_PIN G2 IOSTANDARD LVCMOS33} [get_ports {an[7]}]
 set_property -dict {PACKAGE_PIN C2 IOSTANDARD LVCMOS33} [get_ports {an[6]}]
 set_property -dict {PACKAGE_PIN C1 IOSTANDARD LVCMOS33} [get_ports {an[5]}]
@@ -27,7 +27,7 @@ set_property -dict {PACKAGE_PIN F3 IOSTANDARD LVCMOS33} [get_ports {seg1[4]}]
 set_property -dict {PACKAGE_PIN E2 IOSTANDARD LVCMOS33} [get_ports {seg1[5]}]
 set_property -dict {PACKAGE_PIN D2 IOSTANDARD LVCMOS33} [get_ports {seg1[6]}]
 set_property -dict {PACKAGE_PIN H2 IOSTANDARD LVCMOS33} [get_ports {seg1[7]}]
-#≤¶¬Îø™πÿ
+#Êã®Á†ÅÂºÄÂÖ≥
 set_property -dict {PACKAGE_PIN P5 IOSTANDARD LVCMOS33} [get_ports {sw[7]}]
 set_property -dict {PACKAGE_PIN P4 IOSTANDARD LVCMOS33} [get_ports {sw[6]}]
 set_property -dict {PACKAGE_PIN P3 IOSTANDARD LVCMOS33} [get_ports {sw[5]}]
