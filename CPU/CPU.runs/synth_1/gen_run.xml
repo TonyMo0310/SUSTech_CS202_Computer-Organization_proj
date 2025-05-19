@@ -3,8 +3,6 @@
   <File Type="PA-TCL" Name="CPU_top.tcl"/>
   <File Type="REPORTS-TCL" Name="CPU_top_reports.tcl"/>
   <File Type="RDS-RDS" Name="CPU_top.vds"/>
-  <File Type="RDS-UTIL" Name="CPU_top_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="CPU_top_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="CPU_top.dcp"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
