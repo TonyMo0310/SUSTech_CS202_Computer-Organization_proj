@@ -23,21 +23,35 @@
 module CPU_state(
     input clk,
     input rst,
+    input pause,
+    input confirm,
     output reg  IFen,
     output reg MEMen,
     output reg  WBen
     );
-    reg [2:0]state;//000:IF,001:MEM,010:WB,011:IDLE 后续有需要再加
+    reg [2:0]state;//000:IF,001:MEM,010:WB,011:IDLE,100:停止 后续有需要再加
+    reg confirm_pre;
     always @(posedge clk or negedge rst) begin
         if(!rst) begin
-            state=3'b011;//默认IDLE状态
+            state<=3'b011;//默认IDLE状态
+            confirm_pre<=1'b0;
         end else begin
+            confirm_pre<=confirm;
             case(state)
-                3'b011:state=3'b000;//IDLE->IF
-                3'b000:state=3'b001;//IF->MEM
-                3'b001:state=3'b010;//MEM->WB
-                3'b010:state=3'b000;//WB->IF
-                default :state=3'b011;//异常情况处理
+                3'b011:state<=3'b000;//IDLE->IF
+                3'b000:
+                    if(!pause)
+                        state<=3'b001;//IF->MEM
+                    else
+                        state<=3'b100;//IF->PAUSE
+                3'b001:state<=3'b010;//MEM->WB
+                3'b010:state<=3'b000;//WB->IF
+                3'b100:
+                    if(confirm&!confirm_pre)//检测上升沿
+                        state<=3'b001;//PAUSE->MEM
+                    else
+                        state<=3'b100;
+                default :state<=3'b011;//异常情况处理
             endcase 
         end
     end

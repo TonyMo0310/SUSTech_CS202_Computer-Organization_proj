@@ -1,8 +1,8 @@
-#时钟和重置
-set_property -dict {PACKAGE_PIN P17 IOSTANDARD LVCMOS33} [get_ports clk ]
-set_property -dict {PACKAGE_PIN P15 IOSTANDARD LVCMOS33} [get_ports rst ]
-create_clock -period 20.000 -name clk [get_ports clk]
-#七段数码管
+#时钟和重�?
+create_clock -period 100.000 -name fpga_clk [get_ports fpga_clk]
+set_property -dict {PACKAGE_PIN P17 IOSTANDARD LVCMOS33} [get_ports fpga_clk ]
+set_property -dict {PACKAGE_PIN P15 IOSTANDARD LVCMOS33} [get_ports fpga_rst ]
+#七段数码�?
 set_property -dict {PACKAGE_PIN G2 IOSTANDARD LVCMOS33} [get_ports {an[7]}]
 set_property -dict {PACKAGE_PIN C2 IOSTANDARD LVCMOS33} [get_ports {an[6]}]
 set_property -dict {PACKAGE_PIN C1 IOSTANDARD LVCMOS33} [get_ports {an[5]}]
@@ -27,7 +27,7 @@ set_property -dict {PACKAGE_PIN F3 IOSTANDARD LVCMOS33} [get_ports {seg1[4]}]
 set_property -dict {PACKAGE_PIN E2 IOSTANDARD LVCMOS33} [get_ports {seg1[5]}]
 set_property -dict {PACKAGE_PIN D2 IOSTANDARD LVCMOS33} [get_ports {seg1[6]}]
 set_property -dict {PACKAGE_PIN H2 IOSTANDARD LVCMOS33} [get_ports {seg1[7]}]
-#拨码开关
+#拨码�?�?
 set_property -dict {PACKAGE_PIN P5 IOSTANDARD LVCMOS33} [get_ports {sw[7]}]
 set_property -dict {PACKAGE_PIN P4 IOSTANDARD LVCMOS33} [get_ports {sw[6]}]
 set_property -dict {PACKAGE_PIN P3 IOSTANDARD LVCMOS33} [get_ports {sw[5]}]
@@ -40,3 +40,18 @@ set_property -dict {PACKAGE_PIN R1 IOSTANDARD LVCMOS33} [get_ports {sw[0]}]
 set_property -dict {PACKAGE_PIN U3 IOSTANDARD LVCMOS33} [get_ports {choose[1]}]
 set_property -dict {PACKAGE_PIN U2 IOSTANDARD LVCMOS33} [get_ports {choose[0]}]
 
+ set_property -dict {IOSTANDARD LVCMOS33 PACKAGE_PIN T4} [get_ports uart_tx]
+ set_property -dict {IOSTANDARD LVCMOS33 PACKAGE_PIN N5} [get_ports uart_rx]
+ #LED
+ set_property -dict {PACKAGE_PIN F6 IOSTANDARD LVCMOS33} [get_ports {led[7]}]
+ set_property -dict {PACKAGE_PIN G4 IOSTANDARD LVCMOS33} [get_ports {led[6]}]
+ set_property -dict {PACKAGE_PIN G3 IOSTANDARD LVCMOS33} [get_ports {led[5]}]
+ set_property -dict {PACKAGE_PIN J4 IOSTANDARD LVCMOS33} [get_ports {led[4]}]
+ set_property -dict {PACKAGE_PIN H4 IOSTANDARD LVCMOS33} [get_ports {led[3]}]
+ set_property -dict {PACKAGE_PIN J3 IOSTANDARD LVCMOS33} [get_ports {led[2]}]
+ set_property -dict {PACKAGE_PIN J2 IOSTANDARD LVCMOS33} [get_ports {led[1]}]
+ set_property -dict {PACKAGE_PIN K2 IOSTANDARD LVCMOS33} [get_ports {led[0]}]
+ #д�뿪��
+ set_property -dict {PACKAGE_PIN T5 IOSTANDARD LVCMOS33} [get_ports {start_pg}]
+ #ȷ�ϰ�ť
+ set_property -dict {PACKAGE_PIN R11 IOSTANDARD LVCMOS33} [get_ports {confirmBottom}]
