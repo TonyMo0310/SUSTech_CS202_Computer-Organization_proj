@@ -26,17 +26,9 @@ module IFetch(
     input branch,
     input zero,            // ALU零标志
     input [31:0] imm32,    // 符号扩展后的32位立即数
-    output [31:0] instruction,  // 从ROM读取的指令
     output reg [31:0]pc,
     input IFen             // PC更新使能信号（仅在为高时允许改变PC）
 );
-
-
-    prgrom urom (
-        .clka(clk),
-        .addra(pc[15:2]),
-        .douta(instruction)
-    );
 
     // 处理异步复位和同步时钟更新
     always @(negedge rst or posedge clk) begin

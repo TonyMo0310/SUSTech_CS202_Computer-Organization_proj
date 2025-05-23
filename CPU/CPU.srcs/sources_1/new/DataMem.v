@@ -29,7 +29,15 @@ module DataMem(
     output reg [31:0] IOout,       // IO output
     input clk,                     // Clock
     input rst,                     // Reset
-    input MEMen                    // Memory enable
+    input MEMen,                    // Memory enable
+    // UART Programmer Pinouts
+    input upg_rst_i,
+    input  upg_clk_i,// UPG ram_clk_i (10MHz)
+    input upg_wen_i,// UPG write enable
+    input [13:0]upg_adr_i, // UPG write address
+    input [31:0]upg_dat_i,// UPG write data
+    input upg_done_i    // 1 if programming is finished
+
 );
 
     reg writeMem;                  // Write enable for RAM
@@ -123,13 +131,15 @@ module DataMem(
         end
     end
 
-    // RAM instance
-    RAM udram (
-        .clka(clk),
-        .wea(writeMem),
-        .addra(address[15:2]), // Word-aligned address
-        .dina(ramIn),          // Modified data for write
-        .douta(ramOut)         // Full word read data
-    );
-
+    
+    /* CPU work on normal mode when kickOff is 1.
+     CPU work on Uart communicate mode when kickOff is 0.*/
+     wire kickOff = upg_rst_i | (~upg_rst_i & upg_done_i);
+     RAM ram (
+     .clka (kickOff ?  clk     : upg_clk_i),
+     .wea (kickOff ?    writeMem  : upg_wen_i),
+     .addra (kickOff ?  address[15:2] : upg_adr_i),
+     .dina (kickOff ?   ramIn : upg_dat_i),
+     .douta (ramOut)
+);
 endmodule
