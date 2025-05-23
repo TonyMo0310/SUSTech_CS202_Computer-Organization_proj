@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <GenRun Id="synth_1" LaunchPart="xc7a35tcsg324-1" LaunchTime="1748007194">
+=======
+<GenRun Id="synth_1" LaunchPart="xc7a35tcsg324-1" LaunchTime="1747997659">
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
   <File Type="PA-TCL" Name="CPU_top.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="CPU_top_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="CPU_top_reports.tcl"/>

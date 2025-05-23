@@ -2,8 +2,13 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+<<<<<<< HEAD
 # Start of session at: Fri May 23 21:33:16 2025
 # Process ID: 396
+=======
+# Start of session at: Fri May 23 18:54:20 2025
+# Process ID: 12848
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 # Current directory: F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.runs/synth_1
 # Command line: vivado.exe -log CPU_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source CPU_top.tcl
 # Log file: F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.runs/synth_1/CPU_top.vds
@@ -15,13 +20,20 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
+<<<<<<< HEAD
 INFO: Helper process launched with PID 6224 
 ---------------------------------------------------------------------------------
 Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 344.098 ; gain = 102.859
+=======
+INFO: Helper process launched with PID 10336 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 343.477 ; gain = 101.812
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'CPU_top' [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/new/CPU_top.v:22]
 INFO: [Synth 8-638] synthesizing module 'BUFG' [E:/software/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:607]
 INFO: [Synth 8-256] done synthesizing module 'BUFG' (1#1) [E:/software/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:607]
+<<<<<<< HEAD
 INFO: [Synth 8-638] synthesizing module 'debounce' [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/new/debounce.v:23]
 INFO: [Synth 8-638] synthesizing module 'clock_divider' [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/new/clock_divider.v:23]
 INFO: [Synth 8-256] done synthesizing module 'clock_divider' (2#1) [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/new/clock_divider.v:23]
@@ -55,18 +67,56 @@ INFO: [Synth 8-638] synthesizing module 'CPU_state' [F:/ComputerOrganization/SUS
 INFO: [Synth 8-256] done synthesizing module 'CPU_state' (16#1) [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/new/CPU_state.v:23]
 INFO: [Synth 8-638] synthesizing module 'ALU' [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/imports/Downloads/ALU.v:23]
 INFO: [Synth 8-256] done synthesizing module 'ALU' (17#1) [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/imports/Downloads/ALU.v:23]
+=======
+INFO: [Synth 8-638] synthesizing module 'cpuclk' [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.runs/synth_1/.Xil/Vivado-12848-DESKTOP-NV7NN3N/realtime/cpuclk_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'cpuclk' (2#1) [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.runs/synth_1/.Xil/Vivado-12848-DESKTOP-NV7NN3N/realtime/cpuclk_stub.v:5]
+INFO: [Synth 8-638] synthesizing module 'IFetch' [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/imports/Downloads/IFetch.v:23]
+INFO: [Synth 8-256] done synthesizing module 'IFetch' (3#1) [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/imports/Downloads/IFetch.v:23]
+INFO: [Synth 8-638] synthesizing module 'programrom' [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/new/programrom.v:23]
+INFO: [Synth 8-638] synthesizing module 'prgrom' [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.runs/synth_1/.Xil/Vivado-12848-DESKTOP-NV7NN3N/realtime/prgrom_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'prgrom' (4#1) [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.runs/synth_1/.Xil/Vivado-12848-DESKTOP-NV7NN3N/realtime/prgrom_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'programrom' (5#1) [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/new/programrom.v:23]
+INFO: [Synth 8-638] synthesizing module 'decoder' [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/imports/new/decoder.v:1]
+INFO: [Synth 8-638] synthesizing module 'registers' [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/imports/new/registers.v:1]
+INFO: [Synth 8-256] done synthesizing module 'registers' (6#1) [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/imports/new/registers.v:1]
+INFO: [Synth 8-638] synthesizing module 'immGen' [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/imports/new/immGen.v:1]
+INFO: [Synth 8-256] done synthesizing module 'immGen' (7#1) [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/imports/new/immGen.v:1]
+INFO: [Synth 8-256] done synthesizing module 'decoder' (8#1) [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/imports/new/decoder.v:1]
+INFO: [Synth 8-638] synthesizing module 'control' [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/imports/new/control.v:23]
+INFO: [Synth 8-256] done synthesizing module 'control' (9#1) [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/imports/new/control.v:23]
+INFO: [Synth 8-638] synthesizing module 'regWriteMUX' [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/new/regWriteMUX.v:23]
+INFO: [Synth 8-256] done synthesizing module 'regWriteMUX' (10#1) [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/new/regWriteMUX.v:23]
+INFO: [Synth 8-638] synthesizing module 'DataMem' [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/new/DataMem.v:22]
+	Parameter IOaddress bound to: -1024 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'RAM' [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.runs/synth_1/.Xil/Vivado-12848-DESKTOP-NV7NN3N/realtime/RAM_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'RAM' (11#1) [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.runs/synth_1/.Xil/Vivado-12848-DESKTOP-NV7NN3N/realtime/RAM_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'DataMem' (12#1) [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/new/DataMem.v:22]
+INFO: [Synth 8-638] synthesizing module 'CPU_state' [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/new/CPU_state.v:23]
+INFO: [Synth 8-256] done synthesizing module 'CPU_state' (13#1) [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/new/CPU_state.v:23]
+INFO: [Synth 8-638] synthesizing module 'ALU' [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/imports/Downloads/ALU.v:23]
+INFO: [Synth 8-256] done synthesizing module 'ALU' (14#1) [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/imports/Downloads/ALU.v:23]
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 INFO: [Synth 8-638] synthesizing module 'sevenSegmentDisplay' [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/new/sevenSegmentDisplay.v:11]
 	Parameter maxcnt bound to: 50000 - type: integer 
 INFO: [Synth 8-226] default block is never used [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/new/sevenSegmentDisplay.v:51]
 INFO: [Synth 8-226] default block is never used [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/new/sevenSegmentDisplay.v:64]
 INFO: [Synth 8-226] default block is never used [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/new/sevenSegmentDisplay.v:80]
 WARNING: [Synth 8-5788] Register current_value_reg in module sevenSegmentDisplay is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/new/sevenSegmentDisplay.v:65]
+<<<<<<< HEAD
 INFO: [Synth 8-256] done synthesizing module 'sevenSegmentDisplay' (18#1) [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/new/sevenSegmentDisplay.v:11]
 INFO: [Synth 8-638] synthesizing module 'switchInput' [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/new/switchInput.v:23]
 INFO: [Synth 8-256] done synthesizing module 'switchInput' (19#1) [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/new/switchInput.v:23]
 INFO: [Synth 8-638] synthesizing module 'uart_bmpg_0' [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.runs/synth_1/.Xil/Vivado-396-DESKTOP-NV7NN3N/realtime/uart_bmpg_0_stub.v:6]
 INFO: [Synth 8-256] done synthesizing module 'uart_bmpg_0' (20#1) [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.runs/synth_1/.Xil/Vivado-396-DESKTOP-NV7NN3N/realtime/uart_bmpg_0_stub.v:6]
 INFO: [Synth 8-256] done synthesizing module 'CPU_top' (21#1) [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/new/CPU_top.v:22]
+=======
+INFO: [Synth 8-256] done synthesizing module 'sevenSegmentDisplay' (15#1) [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/new/sevenSegmentDisplay.v:11]
+INFO: [Synth 8-638] synthesizing module 'switchInput' [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/new/switchInput.v:23]
+INFO: [Synth 8-256] done synthesizing module 'switchInput' (16#1) [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/new/switchInput.v:23]
+INFO: [Synth 8-638] synthesizing module 'uart_bmpg_0' [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.runs/synth_1/.Xil/Vivado-12848-DESKTOP-NV7NN3N/realtime/uart_bmpg_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'uart_bmpg_0' (17#1) [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.runs/synth_1/.Xil/Vivado-12848-DESKTOP-NV7NN3N/realtime/uart_bmpg_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'CPU_top' (18#1) [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/new/CPU_top.v:22]
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 WARNING: [Synth 8-3331] design ALU has unconnected port funct7[6]
 WARNING: [Synth 8-3331] design ALU has unconnected port funct7[5]
 WARNING: [Synth 8-3331] design ALU has unconnected port funct7[4]
@@ -75,7 +125,11 @@ WARNING: [Synth 8-3331] design ALU has unconnected port funct7[2]
 WARNING: [Synth 8-3331] design ALU has unconnected port funct7[1]
 WARNING: [Synth 8-3331] design ALU has unconnected port funct7[0]
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
 Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 396.156 ; gain = 154.918
+=======
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 395.785 ; gain = 154.121
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -85,13 +139,18 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
 Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 396.156 ; gain = 154.918
+=======
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 395.785 ; gain = 154.121
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
+<<<<<<< HEAD
 Parsing XDC File [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.runs/synth_1/.Xil/Vivado-396-DESKTOP-NV7NN3N/dcp4/RAM_in_context.xdc] for cell 'dataMem/ram'
 Finished Parsing XDC File [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.runs/synth_1/.Xil/Vivado-396-DESKTOP-NV7NN3N/dcp4/RAM_in_context.xdc] for cell 'dataMem/ram'
 Parsing XDC File [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.runs/synth_1/.Xil/Vivado-396-DESKTOP-NV7NN3N/dcp5/progrom_in_context.xdc] for cell 'programrom/urom'
@@ -102,6 +161,18 @@ Parsing XDC File [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_pr
 Finished Parsing XDC File [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.runs/synth_1/.Xil/Vivado-396-DESKTOP-NV7NN3N/dcp7/cpuclk_in_context.xdc] for cell 'cpuclk'
 Parsing XDC File [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/constrs_1/new/CPUconstaint.xdc]
 WARNING: [Constraints 18-619] A clock with name 'fpga_clk' already exists, overwriting the previous clock with the same name. [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/constrs_1/new/CPUconstaint.xdc:2]
+=======
+Parsing XDC File [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.runs/synth_1/.Xil/Vivado-12848-DESKTOP-NV7NN3N/dcp4/RAM_in_context.xdc] for cell 'dataMem/ram'
+Finished Parsing XDC File [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.runs/synth_1/.Xil/Vivado-12848-DESKTOP-NV7NN3N/dcp4/RAM_in_context.xdc] for cell 'dataMem/ram'
+Parsing XDC File [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.runs/synth_1/.Xil/Vivado-12848-DESKTOP-NV7NN3N/dcp5/progrom_in_context.xdc] for cell 'programrom/urom'
+Finished Parsing XDC File [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.runs/synth_1/.Xil/Vivado-12848-DESKTOP-NV7NN3N/dcp5/progrom_in_context.xdc] for cell 'programrom/urom'
+Parsing XDC File [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.runs/synth_1/.Xil/Vivado-12848-DESKTOP-NV7NN3N/dcp6/uart_bmpg_0_in_context.xdc] for cell 'uart_inst'
+Finished Parsing XDC File [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.runs/synth_1/.Xil/Vivado-12848-DESKTOP-NV7NN3N/dcp6/uart_bmpg_0_in_context.xdc] for cell 'uart_inst'
+Parsing XDC File [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.runs/synth_1/.Xil/Vivado-12848-DESKTOP-NV7NN3N/dcp7/cpuclk_in_context.xdc] for cell 'cpuclk'
+Finished Parsing XDC File [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.runs/synth_1/.Xil/Vivado-12848-DESKTOP-NV7NN3N/dcp7/cpuclk_in_context.xdc] for cell 'cpuclk'
+Parsing XDC File [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/constrs_1/new/CPUconstaint.xdc]
+WARNING: [Constraints 18-619] A clock with name 'fpga_clk' already exists, overwriting the previous clock with the same name. [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/constrs_1/new/CPUconstaint.xdc:4]
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Finished Parsing XDC File [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/constrs_1/new/CPUconstaint.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/constrs_1/new/CPUconstaint.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/CPU_top_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/CPU_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
@@ -112,30 +183,51 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
+<<<<<<< HEAD
 Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 736.723 ; gain = 0.000
 ---------------------------------------------------------------------------------
 Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 736.723 ; gain = 495.484
+=======
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 737.125 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'dataMem/ram' at clock pin 'clka' is different from the actual clock period '12.500', this can lead to different synthesis results.
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 737.125 ; gain = 495.461
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcsg324-1
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
 Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 736.723 ; gain = 495.484
+=======
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 737.125 ; gain = 495.461
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
 Applied set_property IO_BUFFER_TYPE = NONE for fpga_clk. (constraint file  F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.runs/synth_1/.Xil/Vivado-396-DESKTOP-NV7NN3N/dcp7/cpuclk_in_context.xdc, line 4).
 Applied set_property CLOCK_BUFFER_TYPE = NONE for fpga_clk. (constraint file  F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.runs/synth_1/.Xil/Vivado-396-DESKTOP-NV7NN3N/dcp7/cpuclk_in_context.xdc, line 5).
+=======
+Applied set_property IO_BUFFER_TYPE = NONE for fpga_clk. (constraint file  F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.runs/synth_1/.Xil/Vivado-12848-DESKTOP-NV7NN3N/dcp7/cpuclk_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for fpga_clk. (constraint file  F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.runs/synth_1/.Xil/Vivado-12848-DESKTOP-NV7NN3N/dcp7/cpuclk_in_context.xdc, line 5).
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Applied set_property DONT_TOUCH = true for cpuclk. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for dataMem/ram. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for programrom/urom. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for uart_inst. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
 Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 736.723 ; gain = 495.484
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "clk_out" won't be mapped to RAM because it is too sparse
+=======
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 737.125 ; gain = 495.461
+---------------------------------------------------------------------------------
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 WARNING: [Synth 8-6014] Unused sequential element pc_reg was removed.  [F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/imports/Downloads/IFetch.v:36]
 INFO: [Synth 8-5546] ROM "registers_reg[0]" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "registers_reg[1]" won't be mapped to RAM because it is too sparse
@@ -195,7 +287,11 @@ INFO: [Synth 8-5546] ROM "divclk" won't be mapped to RAM because it is too spars
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'CPU_state'
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
 Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 736.723 ; gain = 495.484
+=======
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 737.125 ; gain = 495.461
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -237,7 +333,11 @@ Detailed RTL Component Info :
 	   8 Input      3 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 1     
 	  10 Input      2 Bit        Muxes := 1     
+<<<<<<< HEAD
 	   2 Input      1 Bit        Muxes := 40    
+=======
+	   2 Input      1 Bit        Muxes := 36    
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 	  10 Input      1 Bit        Muxes := 7     
 	   4 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
@@ -376,7 +476,11 @@ WARNING: [Synth 8-3331] design ALU has unconnected port funct7[2]
 WARNING: [Synth 8-3331] design ALU has unconnected port funct7[1]
 WARNING: [Synth 8-3331] design ALU has unconnected port funct7[0]
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
 Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 736.723 ; gain = 495.484
+=======
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 737.125 ; gain = 495.461
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -392,13 +496,21 @@ INFO: [Synth 8-5578] Moved timing constraint from pin 'cpuclk/clk_out2' to pin '
 WARNING: [Synth 8-565] redefining clock 'fpga_clk'
 INFO: [Synth 8-5819] Moved 2 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
 Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:35 . Memory (MB): peak = 741.727 ; gain = 500.488
+=======
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 747.465 ; gain = 505.801
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
 Finished Timing Optimization : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 763.891 ; gain = 522.652
+=======
+Finished Timing Optimization : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 818.191 ; gain = 576.527
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -474,7 +586,11 @@ WARNING: [Synth 8-3332] Sequential element (decoder/dut1/registers_reg[0][2]) is
 WARNING: [Synth 8-3332] Sequential element (decoder/dut1/registers_reg[0][1]) is unused and will be removed from module CPU_top.
 WARNING: [Synth 8-3332] Sequential element (decoder/dut1/registers_reg[0][0]) is unused and will be removed from module CPU_top.
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
 Finished Technology Mapping : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 816.125 ; gain = 574.887
+=======
+Finished Technology Mapping : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 853.453 ; gain = 611.789
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -498,7 +614,11 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
 Finished IO Insertion : Time (s): cpu = 00:00:45 ; elapsed = 00:00:45 . Memory (MB): peak = 816.125 ; gain = 574.887
+=======
+Finished IO Insertion : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 853.453 ; gain = 611.789
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -511,7 +631,11 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
 Finished Renaming Generated Instances : Time (s): cpu = 00:00:45 ; elapsed = 00:00:46 . Memory (MB): peak = 816.125 ; gain = 574.887
+=======
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 853.453 ; gain = 611.789
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -523,25 +647,41 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
 Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:45 ; elapsed = 00:00:46 . Memory (MB): peak = 816.125 ; gain = 574.887
+=======
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:45 ; elapsed = 00:00:46 . Memory (MB): peak = 853.453 ; gain = 611.789
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
 Finished Renaming Generated Ports : Time (s): cpu = 00:00:45 ; elapsed = 00:00:46 . Memory (MB): peak = 816.125 ; gain = 574.887
+=======
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:45 ; elapsed = 00:00:46 . Memory (MB): peak = 853.453 ; gain = 611.789
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
 Finished Handling Custom Attributes : Time (s): cpu = 00:00:45 ; elapsed = 00:00:46 . Memory (MB): peak = 816.125 ; gain = 574.887
+=======
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:45 ; elapsed = 00:00:46 . Memory (MB): peak = 853.453 ; gain = 611.789
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
 Finished Renaming Generated Nets : Time (s): cpu = 00:00:45 ; elapsed = 00:00:46 . Memory (MB): peak = 816.125 ; gain = 574.887
+=======
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:45 ; elapsed = 00:00:46 . Memory (MB): peak = 853.453 ; gain = 611.789
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -566,6 +706,7 @@ Report Cell Usage:
 |3     |prgrom      |     1|
 |4     |uart_bmpg_0 |     1|
 |5     |BUFG        |     1|
+<<<<<<< HEAD
 |6     |CARRY4      |    56|
 |7     |LUT1        |     2|
 |8     |LUT2        |   129|
@@ -579,12 +720,29 @@ Report Cell Usage:
 |16    |FDRE        |     5|
 |17    |IBUF        |    14|
 |18    |OBUF        |    33|
+=======
+|6     |CARRY4      |    51|
+|7     |LUT1        |     1|
+|8     |LUT2        |   107|
+|9     |LUT3        |    90|
+|10    |LUT4        |   210|
+|11    |LUT5        |   206|
+|12    |LUT6        |   862|
+|13    |MUXF7       |   260|
+|14    |MUXF8       |    64|
+|15    |FDCE        |  1122|
+|16    |FDPE        |     1|
+|17    |FDRE        |     5|
+|18    |IBUF        |    13|
+|19    |OBUF        |    33|
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 +------+------------+------+
 
 Report Instance Areas: 
 +------+----------------------+--------------------+------+
 |      |Instance              |Module              |Cells |
 +------+----------------------+--------------------+------+
+<<<<<<< HEAD
 |1     |top                   |                    |  3218|
 |2     |  cpu_state           |CPU_state           |    11|
 |3     |  dataMem             |DataMem             |   105|
@@ -608,6 +766,27 @@ Synthesis Optimization Runtime : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 .
 Synthesis Optimization Complete : Time (s): cpu = 00:00:45 ; elapsed = 00:00:46 . Memory (MB): peak = 816.125 ; gain = 574.887
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 400 Unisim elements for replacement
+=======
+|1     |top                   |                    |  3143|
+|2     |  cpu_state           |CPU_state           |     5|
+|3     |  dataMem             |DataMem             |    80|
+|4     |  decoder             |decoder             |  2232|
+|5     |    dut1              |registers           |  2232|
+|6     |  ifetch              |IFetch              |    54|
+|7     |  programrom          |programrom          |   503|
+|8     |  regWriteMUX         |regWriteMUX         |    32|
+|9     |  sevenSegmentDisplay |sevenSegmentDisplay |    83|
+|10    |  switchInput         |switchInput         |    52|
++------+----------------------+--------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:45 ; elapsed = 00:00:46 . Memory (MB): peak = 853.453 ; gain = 611.789
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 42 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 853.453 ; gain = 270.449
+Synthesis Optimization Complete : Time (s): cpu = 00:00:45 ; elapsed = 00:00:46 . Memory (MB): peak = 853.453 ; gain = 611.789
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 388 Unisim elements for replacement
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
@@ -616,6 +795,7 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
+<<<<<<< HEAD
 151 Infos, 51 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
 synth_design: Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 816.125 ; gain = 585.410
@@ -623,3 +803,12 @@ INFO: [Common 17-1381] The checkpoint 'F:/ComputerOrganization/SUSTech_CS202_Com
 INFO: [runtcl-4] Executing : report_utilization -file CPU_top_utilization_synth.rpt -pb CPU_top_utilization_synth.pb
 report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 816.125 ; gain = 0.000
 INFO: [Common 17-206] Exiting Vivado at Fri May 23 21:34:08 2025...
+=======
+142 Infos, 52 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 853.453 ; gain = 622.562
+INFO: [Common 17-1381] The checkpoint 'F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.runs/synth_1/CPU_top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file CPU_top_utilization_synth.rpt -pb CPU_top_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 853.453 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri May 23 18:55:12 2025...
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f

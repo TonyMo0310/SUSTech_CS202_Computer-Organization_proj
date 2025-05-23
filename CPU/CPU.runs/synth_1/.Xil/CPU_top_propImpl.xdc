@@ -1,7 +1,13 @@
 set_property SRC_FILE_INFO {cfile:F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/constrs_1/new/CPUconstaint.xdc rfile:../../../CPU.srcs/constrs_1/new/CPUconstaint.xdc id:1} [current_design]
+<<<<<<< HEAD
 set_property src_info {type:XDC file:1 line:3 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict {PACKAGE_PIN P17 IOSTANDARD LVCMOS33} [get_ports fpga_clk ]
 set_property src_info {type:XDC file:1 line:4 export:INPUT save:INPUT read:READ} [current_design]
+=======
+set_property src_info {type:XDC file:1 line:2 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict {PACKAGE_PIN P17 IOSTANDARD LVCMOS33} [get_ports fpga_clk ]
+set_property src_info {type:XDC file:1 line:3 export:INPUT save:INPUT read:READ} [current_design]
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 set_property -dict {PACKAGE_PIN P15 IOSTANDARD LVCMOS33} [get_ports fpga_rst ]
 set_property src_info {type:XDC file:1 line:6 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict {PACKAGE_PIN G2 IOSTANDARD LVCMOS33} [get_ports {an[7]}]
@@ -93,5 +99,8 @@ set_property src_info {type:XDC file:1 line:53 export:INPUT save:INPUT read:READ
 set_property -dict {PACKAGE_PIN K2 IOSTANDARD LVCMOS33} [get_ports {led[0]}]
 set_property src_info {type:XDC file:1 line:55 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict {PACKAGE_PIN T5 IOSTANDARD LVCMOS33} [get_ports {start_pg}]
+<<<<<<< HEAD
 set_property src_info {type:XDC file:1 line:57 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict {PACKAGE_PIN R11 IOSTANDARD LVCMOS33} [get_ports {confirmBottom}]
+=======
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f

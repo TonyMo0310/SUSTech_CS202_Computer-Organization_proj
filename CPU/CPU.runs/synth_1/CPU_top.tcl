@@ -37,12 +37,18 @@ add_files F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/C
 read_verilog -library xil_defaultlib {
   F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/imports/Downloads/ALU.v
   F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/new/CPU_state.v
+<<<<<<< HEAD
   F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/new/D_Flip_Flop.v
   F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/new/DataMem.v
   F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/imports/Downloads/IFetch.v
   F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/new/clock_divider.v
   F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/imports/new/control.v
   F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/new/debounce.v
+=======
+  F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/new/DataMem.v
+  F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/imports/Downloads/IFetch.v
+  F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/imports/new/control.v
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
   F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/imports/new/decoder.v
   F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/imports/new/immGen.v
   F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/new/programrom.v
@@ -55,12 +61,20 @@ read_verilog -library xil_defaultlib {
 read_ip -quiet F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/RAM/RAM.xci
 set_property used_in_implementation false [get_files -all f:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/RAM/RAM_ooc.xdc]
 
+<<<<<<< HEAD
 read_ip -quiet F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/prgrom/prgrom.xci
+=======
+read_ip -quiet f:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/prgrom/prgrom.xci
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 set_property used_in_implementation false [get_files -all f:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/prgrom/prgrom_ooc.xdc]
 
 read_ip -quiet F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/uart_bmpg_0/uart_bmpg_0.xci
 
+<<<<<<< HEAD
 read_ip -quiet F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk.xci
+=======
+read_ip -quiet f:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk.xci
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 set_property used_in_implementation false [get_files -all f:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk_board.xdc]
 set_property used_in_implementation false [get_files -all f:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk.xdc]
 set_property used_in_implementation false [get_files -all f:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk_ooc.xdc]

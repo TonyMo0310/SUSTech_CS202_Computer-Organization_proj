@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <GenRun Id="impl_1" LaunchPart="xc7a35tcsg324-1" LaunchTime="1748007195">
+=======
+<GenRun Id="impl_1" LaunchPart="xc7a35tcsg324-1" LaunchTime="1747997659">
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
   <File Type="PWROPT-DCP" Name="CPU_top_pwropt.dcp"/>
   <File Type="ROUTE-PWR" Name="CPU_top_power_routed.rpt"/>
   <File Type="PA-TCL" Name="CPU_top.tcl"/>
