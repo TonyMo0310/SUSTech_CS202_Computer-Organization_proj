@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
+<GenRun Id="synth_1" LaunchPart="xc7a35tcsg324-1" LaunchTime="1748007194">
+=======
 <GenRun Id="synth_1" LaunchPart="xc7a35tcsg324-1" LaunchTime="1747997659">
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
   <File Type="PA-TCL" Name="CPU_top.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="CPU_top_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="CPU_top_reports.tcl"/>
@@ -41,6 +45,13 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/D_Flip_Flop.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/DataMem.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -57,10 +68,24 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/clock_divider.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/imports/new/control.v">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../RISC_V/RISC_V.srcs/sources_1/new/control.v"/>
         <Attr Name="ImportTime" Val="1745221839"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/debounce.v">
+      <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>

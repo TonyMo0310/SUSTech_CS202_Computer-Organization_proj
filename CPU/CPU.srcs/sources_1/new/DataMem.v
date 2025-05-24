@@ -27,6 +27,7 @@ module DataMem(
     input [31:0] writeData,        // Data to write
     input [31:0] IOin,             // IO input
     output reg [31:0] IOout,       // IO output
+    output reg pause,                    //ÖÐ¶ÏÐÅºÅ
     input clk,                     // Clock
     input rst,                     // Reset
     input MEMen,                    // Memory enable
@@ -49,7 +50,9 @@ module DataMem(
     always @* begin
         if (address == IOaddress) begin
             readData = IOin;       // IO read (word only)
+            pause=memWrite;
         end else begin
+            pause=1'b0;
             case (memOp)
                 3'b000: begin // lb: Load byte with sign extension
                     case (address[1:0])

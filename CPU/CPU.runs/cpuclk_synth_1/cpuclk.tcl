@@ -32,7 +32,11 @@ set_property target_language Verilog [current_project]
 set_property ip_repo_paths f:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/SEU_CSE_507_user_uart_bmpg_1.3/SEU_CSE_507_user_uart_bmpg_1.3 [current_project]
 set_property ip_output_repo f:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
+<<<<<<< HEAD
+read_ip -quiet F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk.xci
+=======
 read_ip -quiet f:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk.xci
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 set_property used_in_implementation false [get_files -all f:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk_board.xdc]
 set_property used_in_implementation false [get_files -all f:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk.xdc]
 set_property used_in_implementation false [get_files -all f:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk_ooc.xdc]
@@ -87,32 +91,52 @@ write_checkpoint -force -noxdef cpuclk.dcp
 create_report "cpuclk_synth_1_synth_report_utilization_0" "report_utilization -file cpuclk_utilization_synth.rpt -pb cpuclk_utilization_synth.pb"
 
 if { [catch {
+<<<<<<< HEAD
+  file copy -force F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.runs/cpuclk_synth_1/cpuclk.dcp F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk.dcp
+=======
   file copy -force F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.runs/cpuclk_synth_1/cpuclk.dcp f:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk.dcp
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
+<<<<<<< HEAD
+  write_verilog -force -mode synth_stub F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk_stub.v
+=======
   write_verilog -force -mode synth_stub f:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk_stub.v
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
+<<<<<<< HEAD
+  write_vhdl -force -mode synth_stub F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk_stub.vhdl
+=======
   write_vhdl -force -mode synth_stub f:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk_stub.vhdl
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
+<<<<<<< HEAD
+  write_verilog -force -mode funcsim F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk_sim_netlist.v
+=======
   write_verilog -force -mode funcsim f:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk_sim_netlist.v
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
+<<<<<<< HEAD
+  write_vhdl -force -mode funcsim F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk_sim_netlist.vhdl
+=======
   write_vhdl -force -mode funcsim f:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk_sim_netlist.vhdl
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -122,32 +146,52 @@ if { [catch {
 
 
 if { [catch {
+<<<<<<< HEAD
+  file copy -force F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.runs/cpuclk_synth_1/cpuclk.dcp F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk.dcp
+=======
   file copy -force F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.runs/cpuclk_synth_1/cpuclk.dcp f:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk.dcp
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
+<<<<<<< HEAD
+  file rename -force F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.runs/cpuclk_synth_1/cpuclk_stub.v F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk_stub.v
+=======
   file rename -force F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.runs/cpuclk_synth_1/cpuclk_stub.v f:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk_stub.v
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
+<<<<<<< HEAD
+  file rename -force F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.runs/cpuclk_synth_1/cpuclk_stub.vhdl F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk_stub.vhdl
+=======
   file rename -force F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.runs/cpuclk_synth_1/cpuclk_stub.vhdl f:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk_stub.vhdl
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
+<<<<<<< HEAD
+  file rename -force F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.runs/cpuclk_synth_1/cpuclk_sim_netlist.v F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk_sim_netlist.v
+=======
   file rename -force F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.runs/cpuclk_synth_1/cpuclk_sim_netlist.v f:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk_sim_netlist.v
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
+<<<<<<< HEAD
+  file rename -force F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.runs/cpuclk_synth_1/cpuclk_sim_netlist.vhdl F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk_sim_netlist.vhdl
+=======
   file rename -force F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.runs/cpuclk_synth_1/cpuclk_sim_netlist.vhdl f:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk_sim_netlist.vhdl
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -156,12 +200,20 @@ if { [catch {
 
 if {[file isdir F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.ip_user_files/ip/cpuclk]} {
   catch { 
+<<<<<<< HEAD
+    file copy -force F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk_stub.v F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.ip_user_files/ip/cpuclk
+=======
     file copy -force f:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk_stub.v F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.ip_user_files/ip/cpuclk
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
   }
 }
 
 if {[file isdir F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.ip_user_files/ip/cpuclk]} {
   catch { 
+<<<<<<< HEAD
+    file copy -force F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk_stub.vhdl F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.ip_user_files/ip/cpuclk
+=======
     file copy -force f:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk_stub.vhdl F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.ip_user_files/ip/cpuclk
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
   }
 }

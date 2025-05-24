@@ -1,7 +1,11 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+<<<<<<< HEAD
+| Date         : Fri May 23 21:40:33 2025
+=======
 | Date         : Fri May 23 18:56:34 2025
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 | Host         : DESKTOP-NV7NN3N running 64-bit major release  (build 9200)
 | Command      : report_methodology -file CPU_top_methodology_drc_routed.rpt -pb CPU_top_methodology_drc_routed.pb -rpx CPU_top_methodology_drc_routed.rpx
 | Design       : CPU_top
@@ -23,7 +27,11 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
+<<<<<<< HEAD
+             Violations found: 252
+=======
              Violations found: 1250
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 +-----------+----------+------------------------------------------------------------------+------------+
 | Rule      | Severity | Description                                                      | Violations |
 +-----------+----------+------------------------------------------------------------------+------------+
@@ -32,8 +40,12 @@ Table of Contents
 | TIMING-6  | Warning  | No common primary clock between related clocks                   | 2          |
 | TIMING-7  | Warning  | No common node between related clocks                            | 2          |
 | TIMING-14 | Warning  | LUT on the clock tree                                            | 1          |
+<<<<<<< HEAD
+| TIMING-17 | Warning  | Non-clocked sequential cell                                      | 242        |
+=======
 | TIMING-16 | Warning  | Large setup violation                                            | 1000       |
 | TIMING-17 | Warning  | Non-clocked sequential cell                                      | 240        |
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 | TIMING-18 | Warning  | Missing input or output delay                                    | 2          |
 | TIMING-27 | Warning  | Invalid primary clock on hierarchical pin                        | 1          |
 +-----------+----------+------------------------------------------------------------------+------------+
@@ -43,6 +55,38 @@ Table of Contents
 CKLD-2#1 Warning
 Clock Net has IO Driver, not a Clock Buf, and/or non-Clock loads  
 Clock net fpga_clk_IBUF is directly driven by an IO rather than a Clock Buffer or may be an IO driving a mix of Clock Buffer and non-Clock loads. This connectivity should be reviewed and corrected as appropriate. Driver(s): fpga_clk_IBUF_inst/O
+<<<<<<< HEAD
+Related violations: <none>
+
+TIMING-4#1 Warning
+Invalid primary clock redefinition on a clock tree  
+Invalid clock redefinition on a clock tree. The primary clock cpuclk/inst/clk_in1 is defined downstream of clock fpga_clk and overrides its insertion delay and/or waveform definition
+Related violations: <none>
+
+TIMING-6#1 Warning
+No common primary clock between related clocks  
+The clocks fpga_clk and clk_out1_cpuclk are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks fpga_clk] -to [get_clocks clk_out1_cpuclk]
+Related violations: <none>
+
+TIMING-6#2 Warning
+No common primary clock between related clocks  
+The clocks fpga_clk and clk_out2_cpuclk are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks fpga_clk] -to [get_clocks clk_out2_cpuclk]
+Related violations: <none>
+
+TIMING-7#1 Warning
+No common node between related clocks  
+The clocks fpga_clk and clk_out1_cpuclk are related (timed together) but they have no common node. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks fpga_clk] -to [get_clocks clk_out1_cpuclk]
+Related violations: <none>
+
+TIMING-7#2 Warning
+No common node between related clocks  
+The clocks fpga_clk and clk_out2_cpuclk are related (timed together) but they have no common node. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks fpga_clk] -to [get_clocks clk_out2_cpuclk]
+Related violations: <none>
+
+TIMING-14#1 Warning
+LUT on the clock tree  
+The LUT dataMem/ram_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+=======
 Related violations: <none>
 
 TIMING-4#1 Warning
@@ -5073,1204 +5117,2174 @@ Related violations: <none>
 TIMING-16#1000 Warning
 Large setup violation  
 There is a large setup violation of -9.850 ns between upg_rst_reg/C (clocked by fpga_clk) and dataMem/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DIADI[1] (clocked by clk_out1_cpuclk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Related violations: <none>
 
 TIMING-17#1 Warning
 Non-clocked sequential cell  
+<<<<<<< HEAD
+The clock pin debounce/dff1/q_reg/C is not reached by a timing clock
+=======
 The clock pin programrom/urom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[0]/C is not reached by a timing clock
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Related violations: <none>
 
 TIMING-17#2 Warning
 Non-clocked sequential cell  
+<<<<<<< HEAD
+The clock pin debounce/dff2/q_reg/C is not reached by a timing clock
+=======
 The clock pin programrom/urom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[1]/C is not reached by a timing clock
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Related violations: <none>
 
 TIMING-17#3 Warning
 Non-clocked sequential cell  
+<<<<<<< HEAD
+The clock pin programrom/urom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[0]/C is not reached by a timing clock
+=======
 The clock pin programrom/urom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/CLKARDCLK is not reached by a timing clock
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Related violations: <none>
 
 TIMING-17#4 Warning
 Non-clocked sequential cell  
+<<<<<<< HEAD
+The clock pin programrom/urom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[1]/C is not reached by a timing clock
+=======
 The clock pin programrom/urom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKARDCLK is not reached by a timing clock
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Related violations: <none>
 
 TIMING-17#5 Warning
 Non-clocked sequential cell  
+<<<<<<< HEAD
+The clock pin programrom/urom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/CLKARDCLK is not reached by a timing clock
+=======
 The clock pin programrom/urom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKARDCLK is not reached by a timing clock
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Related violations: <none>
 
 TIMING-17#6 Warning
 Non-clocked sequential cell  
+<<<<<<< HEAD
+The clock pin programrom/urom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKARDCLK is not reached by a timing clock
+=======
 The clock pin programrom/urom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKARDCLK is not reached by a timing clock
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Related violations: <none>
 
 TIMING-17#7 Warning
 Non-clocked sequential cell  
+<<<<<<< HEAD
+The clock pin programrom/urom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKARDCLK is not reached by a timing clock
+=======
 The clock pin programrom/urom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKARDCLK is not reached by a timing clock
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Related violations: <none>
 
 TIMING-17#8 Warning
 Non-clocked sequential cell  
+<<<<<<< HEAD
+The clock pin programrom/urom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKARDCLK is not reached by a timing clock
+=======
 The clock pin programrom/urom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKARDCLK is not reached by a timing clock
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Related violations: <none>
 
 TIMING-17#9 Warning
 Non-clocked sequential cell  
+<<<<<<< HEAD
+The clock pin programrom/urom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKARDCLK is not reached by a timing clock
+=======
 The clock pin programrom/urom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKARDCLK is not reached by a timing clock
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Related violations: <none>
 
 TIMING-17#10 Warning
 Non-clocked sequential cell  
+<<<<<<< HEAD
+The clock pin programrom/urom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKARDCLK is not reached by a timing clock
+=======
 The clock pin programrom/urom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKARDCLK is not reached by a timing clock
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Related violations: <none>
 
 TIMING-17#11 Warning
 Non-clocked sequential cell  
+<<<<<<< HEAD
+The clock pin programrom/urom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKARDCLK is not reached by a timing clock
+=======
 The clock pin programrom/urom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKARDCLK is not reached by a timing clock
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Related violations: <none>
 
 TIMING-17#12 Warning
 Non-clocked sequential cell  
+<<<<<<< HEAD
+The clock pin programrom/urom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKARDCLK is not reached by a timing clock
+=======
 The clock pin programrom/urom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKARDCLK is not reached by a timing clock
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Related violations: <none>
 
 TIMING-17#13 Warning
 Non-clocked sequential cell  
+<<<<<<< HEAD
+The clock pin programrom/urom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKARDCLK is not reached by a timing clock
+=======
 The clock pin programrom/urom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKARDCLK is not reached by a timing clock
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Related violations: <none>
 
 TIMING-17#14 Warning
 Non-clocked sequential cell  
+<<<<<<< HEAD
+The clock pin programrom/urom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKARDCLK is not reached by a timing clock
+=======
 The clock pin programrom/urom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKARDCLK is not reached by a timing clock
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Related violations: <none>
 
 TIMING-17#15 Warning
 Non-clocked sequential cell  
+<<<<<<< HEAD
+The clock pin programrom/urom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKARDCLK is not reached by a timing clock
+=======
 The clock pin programrom/urom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKARDCLK is not reached by a timing clock
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Related violations: <none>
 
 TIMING-17#16 Warning
 Non-clocked sequential cell  
+<<<<<<< HEAD
+The clock pin programrom/urom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKARDCLK is not reached by a timing clock
+=======
 The clock pin programrom/urom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKARDCLK is not reached by a timing clock
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Related violations: <none>
 
 TIMING-17#17 Warning
 Non-clocked sequential cell  
+<<<<<<< HEAD
+The clock pin programrom/urom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKARDCLK is not reached by a timing clock
+=======
 The clock pin programrom/urom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKARDCLK is not reached by a timing clock
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Related violations: <none>
 
 TIMING-17#18 Warning
 Non-clocked sequential cell  
+<<<<<<< HEAD
+The clock pin programrom/urom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKARDCLK is not reached by a timing clock
+=======
 The clock pin sevenSegmentDisplay/an_reg[0]/C is not reached by a timing clock
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Related violations: <none>
 
 TIMING-17#19 Warning
 Non-clocked sequential cell  
+<<<<<<< HEAD
+The clock pin programrom/urom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKARDCLK is not reached by a timing clock
+=======
 The clock pin sevenSegmentDisplay/an_reg[1]/C is not reached by a timing clock
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Related violations: <none>
 
 TIMING-17#20 Warning
 Non-clocked sequential cell  
+<<<<<<< HEAD
+The clock pin sevenSegmentDisplay/an_reg[0]/C is not reached by a timing clock
+=======
 The clock pin sevenSegmentDisplay/an_reg[2]/C is not reached by a timing clock
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Related violations: <none>
 
 TIMING-17#21 Warning
 Non-clocked sequential cell  
+<<<<<<< HEAD
+The clock pin sevenSegmentDisplay/an_reg[1]/C is not reached by a timing clock
+=======
 The clock pin sevenSegmentDisplay/an_reg[3]/C is not reached by a timing clock
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Related violations: <none>
 
 TIMING-17#22 Warning
 Non-clocked sequential cell  
+<<<<<<< HEAD
+The clock pin sevenSegmentDisplay/an_reg[2]/C is not reached by a timing clock
+=======
 The clock pin sevenSegmentDisplay/an_reg[4]/C is not reached by a timing clock
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Related violations: <none>
 
 TIMING-17#23 Warning
 Non-clocked sequential cell  
+<<<<<<< HEAD
+The clock pin sevenSegmentDisplay/an_reg[3]/C is not reached by a timing clock
+=======
 The clock pin sevenSegmentDisplay/an_reg[5]/C is not reached by a timing clock
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Related violations: <none>
 
 TIMING-17#24 Warning
 Non-clocked sequential cell  
+<<<<<<< HEAD
+The clock pin sevenSegmentDisplay/an_reg[4]/C is not reached by a timing clock
+=======
 The clock pin sevenSegmentDisplay/an_reg[6]/C is not reached by a timing clock
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Related violations: <none>
 
 TIMING-17#25 Warning
 Non-clocked sequential cell  
+<<<<<<< HEAD
+The clock pin sevenSegmentDisplay/an_reg[5]/C is not reached by a timing clock
+=======
 The clock pin sevenSegmentDisplay/an_reg[7]/C is not reached by a timing clock
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Related violations: <none>
 
 TIMING-17#26 Warning
 Non-clocked sequential cell  
+<<<<<<< HEAD
+The clock pin sevenSegmentDisplay/an_reg[6]/C is not reached by a timing clock
+=======
 The clock pin sevenSegmentDisplay/current_digit_reg[0]/C is not reached by a timing clock
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Related violations: <none>
 
 TIMING-17#27 Warning
 Non-clocked sequential cell  
+<<<<<<< HEAD
+The clock pin sevenSegmentDisplay/an_reg[7]/C is not reached by a timing clock
+=======
 The clock pin sevenSegmentDisplay/current_digit_reg[1]/C is not reached by a timing clock
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Related violations: <none>
 
 TIMING-17#28 Warning
 Non-clocked sequential cell  
+<<<<<<< HEAD
+The clock pin sevenSegmentDisplay/current_digit_reg[0]/C is not reached by a timing clock
+=======
 The clock pin sevenSegmentDisplay/current_digit_reg[2]/C is not reached by a timing clock
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Related violations: <none>
 
 TIMING-17#29 Warning
 Non-clocked sequential cell  
+<<<<<<< HEAD
+The clock pin sevenSegmentDisplay/current_digit_reg[1]/C is not reached by a timing clock
+=======
 The clock pin sevenSegmentDisplay/current_value_reg[0]/C is not reached by a timing clock
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Related violations: <none>
 
 TIMING-17#30 Warning
 Non-clocked sequential cell  
+<<<<<<< HEAD
+The clock pin sevenSegmentDisplay/current_digit_reg[2]/C is not reached by a timing clock
+=======
 The clock pin sevenSegmentDisplay/current_value_reg[1]/C is not reached by a timing clock
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Related violations: <none>
 
 TIMING-17#31 Warning
 Non-clocked sequential cell  
+<<<<<<< HEAD
+The clock pin sevenSegmentDisplay/current_value_reg[0]/C is not reached by a timing clock
+=======
 The clock pin sevenSegmentDisplay/current_value_reg[2]/C is not reached by a timing clock
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Related violations: <none>
 
 TIMING-17#32 Warning
 Non-clocked sequential cell  
-The clock pin sevenSegmentDisplay/current_value_reg[3]/C is not reached by a timing clock
+<<<<<<< HEAD
+The clock pin sevenSegmentDisplay/current_value_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#33 Warning
 Non-clocked sequential cell  
-The clock pin uart_inst/inst/upg_inst/bn_ascii_reg[0]/C is not reached by a timing clock
+The clock pin sevenSegmentDisplay/current_value_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#34 Warning
 Non-clocked sequential cell  
-The clock pin uart_inst/inst/upg_inst/bn_ascii_reg[10]/C is not reached by a timing clock
+The clock pin sevenSegmentDisplay/current_value_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#35 Warning
+=======
+The clock pin sevenSegmentDisplay/current_value_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#33 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
+Non-clocked sequential cell  
+The clock pin uart_inst/inst/upg_inst/bn_ascii_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+<<<<<<< HEAD
+TIMING-17#36 Warning
+=======
+TIMING-17#34 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
+Non-clocked sequential cell  
+The clock pin uart_inst/inst/upg_inst/bn_ascii_reg[10]/C is not reached by a timing clock
+Related violations: <none>
+
+<<<<<<< HEAD
+TIMING-17#37 Warning
+=======
+TIMING-17#35 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/bn_ascii_reg[11]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#38 Warning
+=======
 TIMING-17#36 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/bn_ascii_reg[13]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#39 Warning
+=======
 TIMING-17#37 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/bn_ascii_reg[14]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#40 Warning
+=======
 TIMING-17#38 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/bn_ascii_reg[16]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#41 Warning
+=======
 TIMING-17#39 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/bn_ascii_reg[17]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#42 Warning
+=======
 TIMING-17#40 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/bn_ascii_reg[18]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#43 Warning
+=======
 TIMING-17#41 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/bn_ascii_reg[19]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#44 Warning
+=======
 TIMING-17#42 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/bn_ascii_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#45 Warning
+=======
 TIMING-17#43 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/bn_ascii_reg[21]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#46 Warning
+=======
 TIMING-17#44 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/bn_ascii_reg[22]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#47 Warning
+=======
 TIMING-17#45 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/bn_ascii_reg[24]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#48 Warning
+=======
 TIMING-17#46 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/bn_ascii_reg[25]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#49 Warning
+=======
 TIMING-17#47 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/bn_ascii_reg[26]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#50 Warning
+=======
 TIMING-17#48 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/bn_ascii_reg[27]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#51 Warning
+=======
 TIMING-17#49 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/bn_ascii_reg[29]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#52 Warning
+=======
 TIMING-17#50 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/bn_ascii_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#53 Warning
+=======
 TIMING-17#51 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/bn_ascii_reg[30]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#54 Warning
+=======
 TIMING-17#52 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/bn_ascii_reg[32]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#55 Warning
+=======
 TIMING-17#53 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/bn_ascii_reg[33]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#56 Warning
+=======
 TIMING-17#54 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/bn_ascii_reg[34]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#57 Warning
+=======
 TIMING-17#55 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/bn_ascii_reg[35]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#58 Warning
+=======
 TIMING-17#56 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/bn_ascii_reg[37]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#59 Warning
+=======
 TIMING-17#57 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/bn_ascii_reg[38]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#60 Warning
+=======
 TIMING-17#58 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/bn_ascii_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#61 Warning
+=======
 TIMING-17#59 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/bn_ascii_reg[40]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#62 Warning
+=======
 TIMING-17#60 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/bn_ascii_reg[41]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#63 Warning
+=======
 TIMING-17#61 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/bn_ascii_reg[42]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#64 Warning
+=======
 TIMING-17#62 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/bn_ascii_reg[43]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#65 Warning
+=======
 TIMING-17#63 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/bn_ascii_reg[45]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#66 Warning
+=======
 TIMING-17#64 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/bn_ascii_reg[46]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#67 Warning
+=======
 TIMING-17#65 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/bn_ascii_reg[48]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#68 Warning
+=======
 TIMING-17#66 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/bn_ascii_reg[49]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#69 Warning
+=======
 TIMING-17#67 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/bn_ascii_reg[50]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#70 Warning
+=======
 TIMING-17#68 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/bn_ascii_reg[51]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#71 Warning
+=======
 TIMING-17#69 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/bn_ascii_reg[53]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#72 Warning
+=======
 TIMING-17#70 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/bn_ascii_reg[54]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#73 Warning
+=======
 TIMING-17#71 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/bn_ascii_reg[56]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#74 Warning
+=======
 TIMING-17#72 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/bn_ascii_reg[57]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#75 Warning
+=======
 TIMING-17#73 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/bn_ascii_reg[58]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#76 Warning
+=======
 TIMING-17#74 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/bn_ascii_reg[59]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#77 Warning
+=======
 TIMING-17#75 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/bn_ascii_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#78 Warning
+=======
 TIMING-17#76 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/bn_ascii_reg[61]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#79 Warning
+=======
 TIMING-17#77 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/bn_ascii_reg[62]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#80 Warning
+=======
 TIMING-17#78 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/bn_ascii_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#81 Warning
+=======
 TIMING-17#79 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/bn_ascii_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#82 Warning
+=======
 TIMING-17#80 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/bn_ascii_reg[9]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#83 Warning
+=======
 TIMING-17#81 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_cnt_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#84 Warning
+=======
 TIMING-17#82 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_cnt_reg[10]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#85 Warning
+=======
 TIMING-17#83 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_cnt_reg[11]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#86 Warning
+=======
 TIMING-17#84 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_cnt_reg[12]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#87 Warning
+=======
 TIMING-17#85 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_cnt_reg[13]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#88 Warning
+=======
 TIMING-17#86 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_cnt_reg[14]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#89 Warning
+=======
 TIMING-17#87 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_cnt_reg[15]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#90 Warning
+=======
 TIMING-17#88 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_cnt_reg[16]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#91 Warning
+=======
 TIMING-17#89 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_cnt_reg[17]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#92 Warning
+=======
 TIMING-17#90 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_cnt_reg[18]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#93 Warning
+=======
 TIMING-17#91 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_cnt_reg[19]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#94 Warning
+=======
 TIMING-17#92 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_cnt_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#95 Warning
+=======
 TIMING-17#93 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_cnt_reg[20]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#96 Warning
+=======
 TIMING-17#94 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_cnt_reg[21]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#97 Warning
+=======
 TIMING-17#95 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_cnt_reg[22]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#98 Warning
+=======
 TIMING-17#96 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_cnt_reg[23]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#99 Warning
+=======
 TIMING-17#97 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_cnt_reg[24]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#100 Warning
+=======
 TIMING-17#98 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_cnt_reg[25]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#101 Warning
+=======
 TIMING-17#99 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_cnt_reg[26]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#102 Warning
+=======
 TIMING-17#100 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_cnt_reg[27]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#103 Warning
+=======
 TIMING-17#101 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_cnt_reg[28]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#104 Warning
+=======
 TIMING-17#102 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_cnt_reg[29]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#105 Warning
+=======
 TIMING-17#103 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_cnt_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#106 Warning
+=======
 TIMING-17#104 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_cnt_reg[30]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#107 Warning
+=======
 TIMING-17#105 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_cnt_reg[31]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#108 Warning
+=======
 TIMING-17#106 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_cnt_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#109 Warning
+=======
 TIMING-17#107 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_cnt_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#110 Warning
+=======
 TIMING-17#108 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_cnt_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#111 Warning
+=======
 TIMING-17#109 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_cnt_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#112 Warning
+=======
 TIMING-17#110 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_cnt_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#113 Warning
+=======
 TIMING-17#111 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_cnt_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#114 Warning
+=======
 TIMING-17#112 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_cnt_reg[9]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#115 Warning
+=======
 TIMING-17#113 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_len_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#116 Warning
+=======
 TIMING-17#114 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_len_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#117 Warning
+=======
 TIMING-17#115 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_len_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#118 Warning
+=======
 TIMING-17#116 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_len_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#119 Warning
+=======
 TIMING-17#117 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_len_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#120 Warning
+=======
 TIMING-17#118 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_len_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#121 Warning
+=======
 TIMING-17#119 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_len_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#122 Warning
+=======
 TIMING-17#120 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_len_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#123 Warning
+=======
 TIMING-17#121 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_num_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#124 Warning
+=======
 TIMING-17#122 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_num_reg[10]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#125 Warning
+=======
 TIMING-17#123 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_num_reg[11]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#126 Warning
+=======
 TIMING-17#124 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_num_reg[12]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#127 Warning
+=======
 TIMING-17#125 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_num_reg[13]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#128 Warning
+=======
 TIMING-17#126 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_num_reg[14]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#129 Warning
+=======
 TIMING-17#127 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_num_reg[15]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#130 Warning
+=======
 TIMING-17#128 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_num_reg[16]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#131 Warning
+=======
 TIMING-17#129 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_num_reg[17]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#132 Warning
+=======
 TIMING-17#130 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_num_reg[18]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#133 Warning
+=======
 TIMING-17#131 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_num_reg[19]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#134 Warning
+=======
 TIMING-17#132 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_num_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#135 Warning
+=======
 TIMING-17#133 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_num_reg[20]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#136 Warning
+=======
 TIMING-17#134 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_num_reg[21]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#137 Warning
+=======
 TIMING-17#135 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_num_reg[22]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#138 Warning
+=======
 TIMING-17#136 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_num_reg[23]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#139 Warning
+=======
 TIMING-17#137 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_num_reg[24]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#140 Warning
+=======
 TIMING-17#138 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_num_reg[25]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#141 Warning
+=======
 TIMING-17#139 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_num_reg[26]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#142 Warning
+=======
 TIMING-17#140 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_num_reg[27]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#143 Warning
+=======
 TIMING-17#141 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_num_reg[28]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#144 Warning
+=======
 TIMING-17#142 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_num_reg[29]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#145 Warning
+=======
 TIMING-17#143 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_num_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#146 Warning
+=======
 TIMING-17#144 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_num_reg[30]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#147 Warning
+=======
 TIMING-17#145 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_num_reg[31]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#148 Warning
+=======
 TIMING-17#146 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_num_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#149 Warning
+=======
 TIMING-17#147 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_num_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#150 Warning
+=======
 TIMING-17#148 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_num_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#151 Warning
+=======
 TIMING-17#149 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_num_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#152 Warning
+=======
 TIMING-17#150 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_num_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#153 Warning
+=======
 TIMING-17#151 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_num_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#154 Warning
+=======
 TIMING-17#152 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/byte_num_reg[9]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#155 Warning
+=======
 TIMING-17#153 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/dbuf_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#156 Warning
+=======
 TIMING-17#154 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/dbuf_reg[10]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#157 Warning
+=======
 TIMING-17#155 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/dbuf_reg[11]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#158 Warning
+=======
 TIMING-17#156 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/dbuf_reg[12]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#159 Warning
+=======
 TIMING-17#157 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/dbuf_reg[13]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#160 Warning
+=======
 TIMING-17#158 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/dbuf_reg[14]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#161 Warning
+=======
 TIMING-17#159 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/dbuf_reg[15]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#162 Warning
+=======
 TIMING-17#160 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/dbuf_reg[16]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#163 Warning
+=======
 TIMING-17#161 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/dbuf_reg[17]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#164 Warning
+=======
 TIMING-17#162 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/dbuf_reg[18]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#165 Warning
+=======
 TIMING-17#163 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/dbuf_reg[19]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#166 Warning
+=======
 TIMING-17#164 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/dbuf_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#167 Warning
+=======
 TIMING-17#165 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/dbuf_reg[20]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#168 Warning
+=======
 TIMING-17#166 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/dbuf_reg[21]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#169 Warning
+=======
 TIMING-17#167 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/dbuf_reg[22]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#170 Warning
+=======
 TIMING-17#168 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/dbuf_reg[23]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#171 Warning
+=======
 TIMING-17#169 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/dbuf_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#172 Warning
+=======
 TIMING-17#170 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/dbuf_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#173 Warning
+=======
 TIMING-17#171 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/dbuf_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#174 Warning
+=======
 TIMING-17#172 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/dbuf_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#175 Warning
+=======
 TIMING-17#173 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/dbuf_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#176 Warning
+=======
 TIMING-17#174 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/dbuf_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#177 Warning
+=======
 TIMING-17#175 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/dbuf_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#178 Warning
+=======
 TIMING-17#176 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/dbuf_reg[9]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#179 Warning
+=======
 TIMING-17#177 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/disp_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#180 Warning
+=======
 TIMING-17#178 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/disp_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#181 Warning
+=======
 TIMING-17#179 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/disp_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#182 Warning
+=======
 TIMING-17#180 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/disp_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#183 Warning
+=======
 TIMING-17#181 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/disp_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#184 Warning
+=======
 TIMING-17#182 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/disp_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#185 Warning
+=======
 TIMING-17#183 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/disp_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#186 Warning
+=======
 TIMING-17#184 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/disp_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#187 Warning
+=======
 TIMING-17#185 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/len_cnt_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#188 Warning
+=======
 TIMING-17#186 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/len_cnt_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#189 Warning
+=======
 TIMING-17#187 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/len_cnt_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#190 Warning
+=======
 TIMING-17#188 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/len_cnt_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#191 Warning
+=======
 TIMING-17#189 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/recv_done_reg/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#192 Warning
+=======
 TIMING-17#190 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/rx_done_reg/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#193 Warning
+=======
 TIMING-17#191 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/upg_adr_o_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#194 Warning
+=======
 TIMING-17#192 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/upg_adr_o_reg[10]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#195 Warning
+=======
 TIMING-17#193 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/upg_adr_o_reg[11]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#196 Warning
+=======
 TIMING-17#194 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/upg_adr_o_reg[12]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#197 Warning
+=======
 TIMING-17#195 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/upg_adr_o_reg[13]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#198 Warning
+=======
 TIMING-17#196 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/upg_adr_o_reg[14]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#199 Warning
+=======
 TIMING-17#197 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/upg_adr_o_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#200 Warning
+=======
 TIMING-17#198 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/upg_adr_o_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#201 Warning
+=======
 TIMING-17#199 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/upg_adr_o_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#202 Warning
+=======
 TIMING-17#200 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/upg_adr_o_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#203 Warning
+=======
 TIMING-17#201 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/upg_adr_o_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#204 Warning
+=======
 TIMING-17#202 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/upg_adr_o_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#205 Warning
+=======
 TIMING-17#203 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/upg_adr_o_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#206 Warning
+=======
 TIMING-17#204 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/upg_adr_o_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#207 Warning
+=======
 TIMING-17#205 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/upg_adr_o_reg[9]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#208 Warning
+=======
 TIMING-17#206 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/upg_dat_o_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#209 Warning
+=======
 TIMING-17#207 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/upg_dat_o_reg[10]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#210 Warning
+=======
 TIMING-17#208 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/upg_dat_o_reg[11]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#211 Warning
+=======
 TIMING-17#209 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/upg_dat_o_reg[12]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#212 Warning
+=======
 TIMING-17#210 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/upg_dat_o_reg[13]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#213 Warning
+=======
 TIMING-17#211 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/upg_dat_o_reg[14]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#214 Warning
+=======
 TIMING-17#212 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/upg_dat_o_reg[15]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#215 Warning
+=======
 TIMING-17#213 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/upg_dat_o_reg[16]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#216 Warning
+=======
 TIMING-17#214 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/upg_dat_o_reg[17]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#217 Warning
+=======
 TIMING-17#215 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/upg_dat_o_reg[18]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#218 Warning
+=======
 TIMING-17#216 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/upg_dat_o_reg[19]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#219 Warning
+=======
 TIMING-17#217 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/upg_dat_o_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#220 Warning
+=======
 TIMING-17#218 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/upg_dat_o_reg[20]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#221 Warning
+=======
 TIMING-17#219 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/upg_dat_o_reg[21]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#222 Warning
+=======
 TIMING-17#220 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/upg_dat_o_reg[22]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#223 Warning
+=======
 TIMING-17#221 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/upg_dat_o_reg[23]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#224 Warning
+=======
 TIMING-17#222 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/upg_dat_o_reg[24]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#225 Warning
+=======
 TIMING-17#223 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/upg_dat_o_reg[25]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#226 Warning
+=======
 TIMING-17#224 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/upg_dat_o_reg[26]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#227 Warning
+=======
 TIMING-17#225 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/upg_dat_o_reg[27]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#228 Warning
+=======
 TIMING-17#226 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/upg_dat_o_reg[28]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#229 Warning
+=======
 TIMING-17#227 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/upg_dat_o_reg[29]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#230 Warning
+=======
 TIMING-17#228 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/upg_dat_o_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#231 Warning
+=======
 TIMING-17#229 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/upg_dat_o_reg[30]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#232 Warning
+=======
 TIMING-17#230 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/upg_dat_o_reg[31]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#233 Warning
+=======
 TIMING-17#231 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/upg_dat_o_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#234 Warning
+=======
 TIMING-17#232 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/upg_dat_o_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#235 Warning
+=======
 TIMING-17#233 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/upg_dat_o_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#236 Warning
+=======
 TIMING-17#234 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/upg_dat_o_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#237 Warning
+=======
 TIMING-17#235 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/upg_dat_o_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#238 Warning
+=======
 TIMING-17#236 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/upg_dat_o_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#239 Warning
+=======
 TIMING-17#237 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/upg_dat_o_reg[9]/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#240 Warning
+=======
 TIMING-17#238 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/upg_wen_o_reg/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#241 Warning
+=======
 TIMING-17#239 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/wr_byte_len_done_reg/C is not reached by a timing clock
 Related violations: <none>
 
+<<<<<<< HEAD
+TIMING-17#242 Warning
+=======
 TIMING-17#240 Warning
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 Non-clocked sequential cell  
 The clock pin uart_inst/inst/upg_inst/wr_byte_num_done_reg/C is not reached by a timing clock
 Related violations: <none>

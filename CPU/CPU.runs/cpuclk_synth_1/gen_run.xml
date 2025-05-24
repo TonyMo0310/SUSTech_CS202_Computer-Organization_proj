@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
+<GenRun Id="cpuclk_synth_1" LaunchPart="xc7a35tcsg324-1" LaunchTime="1748002397">
+=======
 <GenRun Id="cpuclk_synth_1" LaunchPart="xc7a35tcsg324-1" LaunchTime="1747997631">
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
   <File Type="PA-TCL" Name="cpuclk.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="cpuclk_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="cpuclk_reports.tcl"/>

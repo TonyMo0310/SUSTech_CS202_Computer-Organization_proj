@@ -1,10 +1,17 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+<<<<<<< HEAD
+-- Date        : Fri May 23 20:13:38 2025
+-- Host        : DESKTOP-NV7NN3N running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode synth_stub
+--               F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk_stub.vhdl
+=======
 -- Date        : Fri May 23 18:54:12 2025
 -- Host        : DESKTOP-NV7NN3N running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
 --               f:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk_stub.vhdl
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 -- Design      : cpuclk
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a35tcsg324-1

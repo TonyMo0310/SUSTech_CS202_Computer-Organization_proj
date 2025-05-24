@@ -30,7 +30,8 @@ module CPU_top(
     output [7:0]led,        //控制LED灯，由IOout低位控制
     input start_pg,          //串口输入开关
     input uart_rx,          // 串口输入
-    output uart_tx          // 串口输出
+    output uart_tx,          // 串口输出
+    input confirmBottom
 );
     wire branch;
     wire zero;
@@ -58,6 +59,11 @@ module CPU_top(
     wire [2:0] memOp;
     wire clk;
     wire upg_clk;
+<<<<<<< HEAD
+    wire pause;    
+    wire confirm;
+=======
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
     // UART 相关信号
     wire upg_clk_o;
     wire upg_wen_o;
@@ -76,9 +82,19 @@ module CPU_top(
      //used for other modules which don't relate to UART
      wire rst;      
     assign rst = !(!fpga_rst | !upg_rst);
+<<<<<<< HEAD
+    assign led=IOout[7:0];
+    debounce debounce(
+        .clk(fpga_clk),
+        .rst(rst),
+        .btn_in(confirmBottom),
+        .btn_out(confirm)
+    );
+=======
     
     assign led=IOout[7:0];
     
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
     cpuclk cpuclk(
         .clk_in1(fpga_clk),
         .clk_out1(clk),
@@ -155,6 +171,10 @@ module CPU_top(
         .IOin(IOin),
         .IOout(IOout),
         .MEMen(MEMen),
+<<<<<<< HEAD
+        .pause(pause),
+=======
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
         //UART相关端口
         .upg_rst_i(upg_rst),
         .upg_clk_i(upg_clk_o),
@@ -170,7 +190,9 @@ module CPU_top(
         .rst(rst),
         .IFen(IFen),
         .MEMen(MEMen),
-        .WBen(WBen)
+        .WBen(WBen),
+        .confirm(confirm),
+        .pause(pause)
     );
 
     // 实例化 ALU 模块

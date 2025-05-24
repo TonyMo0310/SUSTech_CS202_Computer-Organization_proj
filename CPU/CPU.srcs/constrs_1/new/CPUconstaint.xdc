@@ -1,7 +1,13 @@
 #鏃堕挓鍜岄噸缃?
+<<<<<<< HEAD
+create_clock -period 100.000 -name fpga_clk [get_ports fpga_clk]
+set_property -dict {PACKAGE_PIN P17 IOSTANDARD LVCMOS33} [get_ports fpga_clk ]
+set_property -dict {PACKAGE_PIN P15 IOSTANDARD LVCMOS33} [get_ports fpga_rst ]
+=======
 set_property -dict {PACKAGE_PIN P17 IOSTANDARD LVCMOS33} [get_ports fpga_clk ]
 set_property -dict {PACKAGE_PIN P15 IOSTANDARD LVCMOS33} [get_ports fpga_rst ]
 create_clock -period 10.000 -name fpga_clk [get_ports fpga_clk]
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 #涓冩鏁扮爜绠?
 set_property -dict {PACKAGE_PIN G2 IOSTANDARD LVCMOS33} [get_ports {an[7]}]
 set_property -dict {PACKAGE_PIN C2 IOSTANDARD LVCMOS33} [get_ports {an[6]}]
@@ -52,4 +58,10 @@ set_property -dict {PACKAGE_PIN U2 IOSTANDARD LVCMOS33} [get_ports {choose[0]}]
  set_property -dict {PACKAGE_PIN J2 IOSTANDARD LVCMOS33} [get_ports {led[1]}]
  set_property -dict {PACKAGE_PIN K2 IOSTANDARD LVCMOS33} [get_ports {led[0]}]
  #写入开关
+<<<<<<< HEAD
  set_property -dict {PACKAGE_PIN T5 IOSTANDARD LVCMOS33} [get_ports {start_pg}]
+ #确认按钮
+ set_property -dict {PACKAGE_PIN R11 IOSTANDARD LVCMOS33} [get_ports {confirmBottom}]
+=======
+ set_property -dict {PACKAGE_PIN T5 IOSTANDARD LVCMOS33} [get_ports {start_pg}]
+>>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
