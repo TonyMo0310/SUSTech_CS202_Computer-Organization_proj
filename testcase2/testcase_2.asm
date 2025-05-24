@@ -18,10 +18,12 @@ prompt4:      .asciz "Enter 4-bit binary (e.g. 1010): "
 prompt5:      .asciz "Enter 8-bit binary: "
 error_msg:    .asciz "Invalid input! Please enter 4-bit binary\n"
 newline:      .asciz "\n"
-case7_debug:  .asciz "[Case7] Testing JAL and JALR\n"
-case7_output_debug: .asciz "[Case7] Reached output\n"
-case7_success:.asciz "1\n"
-case7_fail:   .asciz "0\n"
+case6_prompt: .asciz "\n[Case6] Enter 20-bit binary: "
+case6_output: .asciz "\nHexadecimal output: 0x"
+hex_digits:   .asciz "0123456789ABCDEF"
+case7_prompt: .asciz "\n[Case7] Enter 8-bit binary: "
+case7_output: .asciz "\nResult: "
+case7_error:  .asciz "\nInvalid input! Please enter 8-bit binary\n"
 
 main_buffer:  .space 4
 buffer:       .space 9
@@ -29,7 +31,8 @@ num1:         .half 0
 num2:         .half 0
 input_buf:    .space 6
 output_buf:   .space 9
-bin_buf:      .space 9
+bin_buf:      .space 21
+hex_buf:      .space 9
 
 .text
 .globl main
@@ -395,26 +398,126 @@ print_crc_result:
     addi sp, sp, 4
     ret
 
-# ------------------------- Case6 Logic (LUI Test, Mode 6) -------------------------
+# ------------------------- Case6 Logic (20-bit Binary to Hex) -------------------------
 case6:
     addi sp, sp, -12
     sw ra, 8(sp)
     sw s0, 4(sp)
     sw s1, 0(sp)
 
-    # Test lui instruction
-    lui s0, 0xABCDE         # Load 0xABCDE into upper 20 bits of s0
-    lui s1, 0xABCDE         # Load expected value into s1
-    slli s1, s1, 12         # Shift left to align (0xABCDE000)
+    # Prompt for 20-bit binary input
+    la a0, case6_prompt
+    li a7, 4
+    ecall
 
-    # Compare
-    beq s0, s1, lui_success
-    li a0, 0
-    j lui_output
-lui_success:
-    li a0, 1
-lui_output:
-    li a7, 1
+    # Read 20-bit binary string
+    la a0, bin_buf
+    li a1, 21           # 20 bits + null terminator
+    li a7, 8
+    ecall
+
+    # Validate and convert 20-bit binary input
+    mv a0, a0
+    jal validate_20bit_input
+    bnez a1, case6_error
+
+    la a0, bin_buf
+    jal convert_20bit_binary
+    mv s0, a0           # Save 20-bit number
+
+    # Shift left by 12 to append 12 zeros
+    slli s0, s0, 12
+
+    # Convert to hexadecimal string
+    la a0, case6_output
+    li a7, 4
+    ecall
+
+    mv a0, s0
+    jal bin32_to_hex
+    la a0, hex_buf
+    li a7, 4
+    ecall
+
+    la a0, newline
+    li a7, 4
+    ecall
+
+    lw ra, 8(sp)
+    lw s0, 4(sp)
+    lw s1, 0(sp)
+    addi sp, sp, 12
+    ret
+
+case6_error:
+    la a0, case1_error
+    li a7, 4
+    ecall
+    lw ra, 8(sp)
+    lw s0, 4(sp)
+    lw s1, 0(sp)
+    addi sp, sp, 12
+    ret
+
+# ------------------------- Case7 Logic (JAL/JALR Test, Mode 7) -------------------------
+case7:
+    addi sp, sp, -12
+    sw ra, 8(sp)
+    sw s0, 4(sp)
+    sw s1, 0(sp)
+
+    # Prompt for 8-bit binary input
+    la a0, case7_prompt
+    li a7, 4
+    ecall
+
+    # Read 8-bit binary string
+    la a0, bin_buf
+    li a1, 9
+    li a7, 8
+    ecall
+
+    # Validate input
+    mv a0, a0
+    jal validate_8bit_input
+    bnez a1, case7_error1
+
+    # Convert input to binary
+    la a0, bin_buf
+    jal convert_binary
+    mv s0, a0           # Save original number in s0 (instead of zero register)
+    mv s1, a0           # Save copy for comparison
+
+    # Perform JAL to add_one_jal
+    jal ra, add_one_jal
+    mv s0, a0           # Update s0 with result from add_one_jal
+
+    # Prepare for JALR
+    la t0, add_one_jalr # Load address of add_one_jalr
+    jalr ra, t0, 0      # Jump to add_one_jalr
+    mv s0, a0           # Update s0 with result from add_one_jalr
+
+    # Check if jumps were successful (s0 should be s1 + 2)
+    addi t0, s1, 2
+    beq s0, t0, case7_success
+
+    # If jumps failed, output original number
+    mv a0, s1
+    j case7_output1
+
+case7_success:
+    # If jumps succeeded, output number + 2
+    mv a0, s0
+
+case7_output1:
+    # Output result as 8-bit binary string
+    la a0, case7_output
+    li a7, 4
+    ecall
+    mv a0, s0
+    jal bin8_to_string
+    la a0, output_buf
+    li a7, 4
     ecall
     la a0, newline
     li a7, 4
@@ -426,14 +529,24 @@ lui_output:
     addi sp, sp, 12
     ret
 
-# ------------------------- Case7 Logic (JAL/JALR Test, Mode 7) -------------------------
-case7:
-    li a0, 1
-    li a7, 1
-    ecall
-    la a0, newline
+case7_error1:
+    la a0, case7_error
     li a7, 4
     ecall
+    lw ra, 8(sp)
+    lw s0, 4(sp)
+    lw s1, 0(sp)
+    addi sp, sp, 12
+    ret
+
+# ------------------------- Add One (JAL Target) -------------------------
+add_one_jal:
+    addi a0, a0, 1      # Add 1 to input
+    ret
+
+# ------------------------- Add One (JALR Target) -------------------------
+add_one_jalr:
+    addi a0, a0, 1      # Add 1 to input
     ret
 
 # ------------------------- Binary Conversion Function -------------------------
@@ -616,4 +729,67 @@ v8_fail:
     ret
 v8_success:
     li a1, 0                # Valid input
+    ret
+
+# ------------------------- Validate 20-bit Input -------------------------
+validate_20bit_input:
+    mv t0, a0               # Buffer address
+    li a0, 0                # Result
+    li t2, 20               # Process 20 bits
+v20_loop:
+    lbu t1, 0(t0)
+    beqz t1, v20_fail       # Null terminator too early
+    li t4, 10
+    beq t1, t4, v20_done    # Newline means end of input
+    li t3, 0x30
+    blt t1, t3, v20_fail    # Less than '0'
+    li t3, 0x31
+    bgt t1, t3, v20_fail    # Greater than '1'
+    addi t0, t0, 1
+    addi t2, t2, -1
+    bnez t2, v20_loop
+v20_done:
+    beqz t2, v20_success    # Exactly 20 bits processed
+v20_fail:
+    li a1, 1                # Invalid input
+    ret
+v20_success:
+    li a1, 0                # Valid input
+    ret
+
+# ------------------------- Convert 20-bit Binary -------------------------
+convert_20bit_binary:
+    mv t2, a0               # Buffer address
+    li t0, 0                # Result
+    li t1, 20               # Process 20 bits
+c20_loop:
+    lbu t3, 0(t2)
+    beqz t3, c20_done
+    addi t2, t2, 1
+    xori t3, t3, 0x30       # Convert '0'/'1' to 0/1
+    slli t0, t0, 1
+    or t0, t0, t3
+    addi t1, t1, -1
+    bnez t1, c20_loop
+c20_done:
+    mv a0, t0
+    ret
+
+# ------------------------- 32-bit Binary to Hex -------------------------
+bin32_to_hex:
+    la t0, hex_buf
+    la t4, hex_digits
+    li t1, 8                # Process 8 hex digits (32 bits)
+    mv t2, a0               # Input number
+b32h_loop:
+    srli t3, t2, 28         # Get highest 4 bits
+    andi t3, t3, 0xF
+    add t5, t4, t3          # Get hex digit from hex_digits
+    lbu t3, 0(t5)
+    sb t3, 0(t0)            # Store hex digit
+    slli t2, t2, 4          # Shift left by 4
+    addi t0, t0, 1
+    addi t1, t1, -1
+    bnez t1, b32h_loop
+    sb zero, 0(t0)          # Null terminate
     ret
