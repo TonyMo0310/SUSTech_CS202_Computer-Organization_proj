@@ -1,11 +1,11 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-// Date        : Sat May 10 21:22:05 2025
-// Host        : SHT running 64-bit major release  (build 9200)
+// Date        : Fri May 23 17:04:38 2025
+// Host        : DESKTOP-NV7NN3N running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub -rename_top RAM -prefix
-//               RAM_ RAM_stub.v
-// Design      : RAM
+//               RAM_ progrom_stub.v
+// Design      : progrom
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7a35tcsg324-1
 // --------------------------------------------------------------------------------

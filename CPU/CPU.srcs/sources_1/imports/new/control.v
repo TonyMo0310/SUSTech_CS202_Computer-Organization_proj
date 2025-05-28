@@ -25,7 +25,7 @@ module control(
     output reg branch,
     output reg memRead,
     output reg memtoReg,
-    output reg [2:0] ALUop,// 3'b000 : load/store 3'b001:  beq 3'b010: R-type jal J type:3'b011 lui:3'b100 auipc:3'b101 异常情况：3'b111
+    output reg [2:0] ALUop,// 3'b000:运算指令      3'b001:内存存取指令    3'b010:分支类型    3'b011:J type     3'b100:lui      3'b101:auipc      3'b111:异常情况
     output reg memWrite,
     output reg ALUsrc,//0 is from reg,1 is from imm
     output reg regWrite,
@@ -39,7 +39,7 @@ module control(
        branch=1'b0;
        memRead=1'b1;
        memtoReg=1'b1;
-       ALUop=3'b000;
+       ALUop=3'b001;
        memWrite=1'b0;
        ALUsrc=1'b1;
        regWrite=1'b1;
@@ -61,9 +61,9 @@ module control(
         branch=1'b0;
         memRead=1'b0;
         memtoReg=1'b0;
-        ALUop=3'b010;    
+        ALUop=3'b000;    
         memWrite=1'b0;
-        ALUsrc=1'b0;
+        ALUsrc=1'b1;
         regWrite=1'b1;
         PCtoALU=1'b0;
         regtoPC=1'b0;
@@ -72,7 +72,7 @@ module control(
         branch=1'b0;
         memRead=1'b0;
         memtoReg=1'b0;
-        ALUop=3'b000;    
+        ALUop=3'b001;    
         memWrite=1'b1;
         ALUsrc=1'b1;
         regWrite=1'b0;
@@ -83,7 +83,7 @@ module control(
         branch=1'b0;
         memRead=1'b0;
         memtoReg=1'b0;
-        ALUop=3'b010;
+        ALUop=3'b001;
         memWrite=1'b0;
         ALUsrc=1'b0;
         regWrite=1'b1;
@@ -94,7 +94,7 @@ module control(
         branch=1'b1;
         memRead=1'b0;
         memtoReg=1'b0;
-        ALUop=3'b001;    
+        ALUop=3'b010;    
         memWrite=1'b0;
         ALUsrc=1'b0;
         regWrite=1'b0;

@@ -57,6 +57,7 @@ module CPU_top(
     wire [31:0] IOout;
     wire memtoReg;
     wire regtoPC;
+    wire memRead;
     wire [2:0] memOp;
     wire clk;
     wire upg_clk;
@@ -87,11 +88,12 @@ module CPU_top(
         .btn_in(confirmBottom),
         .btn_out(confirm)
     );
-    cpuclk cpuclk(
-        .clk_in1(fpga_clk),
-        .clk_out1(clk),
-        .clk_out2(upg_clk)
+    ClkDiv ClkDiv(
+        .clk_in(fpga_clk),
+        .clk_out(clk),
+        .rst(rst)
     );
+    assign upg_clk=clk;
     // 实例化 IFetch 模块
     IFetch ifetch (
         .clk(clk),
@@ -106,7 +108,7 @@ module CPU_top(
     );
     programrom programrom (
       // Program ROM Pinouts
-      .rom_clk_i        (upg_clk_o),       // input rom_clk_i
+      .rom_clk_i        (clk),       // input rom_clk_i
       .rom_adr_i        (pc[15:2]),       // input [13:0] rom_adr_i
       .instruction      (instruction),       // output [31:0] instruction
       
@@ -136,7 +138,7 @@ module CPU_top(
     control control (
         .opcode(instruction[6:0]),
         .branch(branch),
-        .memRead(),
+        .memRead(memRead),
         .memtoReg(memtoReg),
         .ALUop(ALUOp),
         .memWrite(memWrite),
@@ -159,6 +161,7 @@ module CPU_top(
         .memOp(instruction[14:12]),
         .readData(readData),
         .memWrite(memWrite),
+        .memRead(memRead),
         .writeData(readData2),
         .clk(clk),
         .rst(rst),
@@ -203,7 +206,7 @@ module CPU_top(
     
     // 七段显示模块实例化
     sevenSegmentDisplay sevenSegmentDisplay (
-        .clk(clk),
+        .clk(fpga_clk),
         .rst(rst),
         .IOout(IOout),
         .seg(seg),

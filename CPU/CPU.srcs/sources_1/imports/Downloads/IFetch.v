@@ -35,7 +35,7 @@ module IFetch(
     // 处理异步复位和同步时钟更新
     always @(negedge rst or posedge clk) begin
         if (!rst) 
-            pc <= 32'h0;   // 异步复位触发（下降沿）
+            pc <= 32'hfffffffc;   // 异步复位触发（下降沿）
         else begin         // 同步模式，仅在使能有效且时钟上升沿时更新PC
             if(IFen) begin
                 if(branch&&zero)

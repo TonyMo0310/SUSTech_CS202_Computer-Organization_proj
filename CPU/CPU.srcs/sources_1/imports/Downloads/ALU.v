@@ -75,7 +75,7 @@ module ALU(
             end
             3'b001: begin  // 减法
                 zero=1'b0;
-                ALUResult = num1 - num2;  // SUB
+                ALUResult = num1 + num2;  // lw,sw
             end
             3'b010: begin  // 比较
                 ALUResult=32'h0;

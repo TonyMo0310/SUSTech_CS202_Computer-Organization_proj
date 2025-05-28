@@ -65,6 +65,7 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
+  set_param xicom.use_bs_reader 1
   create_project -in_memory -part xc7a35tcsg324-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
@@ -73,12 +74,11 @@ set rc [catch {
   set_property ip_repo_paths F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/SEU_CSE_507_user_uart_bmpg_1.3/SEU_CSE_507_user_uart_bmpg_1.3 [current_project]
   set_property ip_output_repo F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
+  set_property XPM_LIBRARIES XPM_MEMORY [current_project]
   add_files -quiet F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.runs/synth_1/CPU_top.dcp
   read_ip -quiet F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/RAM/RAM.xci
-  read_ip -quiet F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/prgrom/prgrom.xci
   read_ip -quiet F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/uart_bmpg_0/uart_bmpg_0.xci
-  read_ip -quiet F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk.xci
+  read_ip -quiet F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/prgrom/prgrom.xci
   read_xdc F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/constrs_1/new/CPUconstaint.xdc
   link_design -top CPU_top -part xc7a35tcsg324-1
   close_msg_db -file init_design.pb
@@ -149,6 +149,25 @@ if {$rc} {
   return -code error $RESULT
 } else {
   end_step route_design
+  unset ACTIVE_STEP 
+}
+
+start_step write_bitstream
+set ACTIVE_STEP write_bitstream
+set rc [catch {
+  create_msg_db write_bitstream.pb
+  set_property XPM_LIBRARIES XPM_MEMORY [current_project]
+  catch { write_mem_info -force CPU_top.mmi }
+  write_bitstream -force CPU_top.bit 
+  catch {write_debug_probes -quiet -force CPU_top}
+  catch {file copy -force CPU_top.ltx debug_nets.ltx}
+  close_msg_db -file write_bitstream.pb
+} RESULT]
+if {$rc} {
+  step_failed write_bitstream
+  return -code error $RESULT
+} else {
+  end_step write_bitstream
   unset ACTIVE_STEP 
 }
 
