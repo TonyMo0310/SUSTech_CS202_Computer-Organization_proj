@@ -26,7 +26,7 @@ module ALU(
     input [31:0] imm32,
     input ALUSrc,
     input PCtoALU,
-    input [1:0] ALUOp,
+    input [2:0] ALUOp,
     input [2:0] funct3,
     input [6:0] funct7,
     input [31:0] pc,
@@ -54,7 +54,7 @@ module ALU(
     // ALU操作
     always @* begin
         case (ALUOp)
-            2'b00: begin  // 加法或�?�辑运算
+            3'b000: begin  // 加法或�?�辑运算
                 zero=1'b0;
                 case (funct3)
                     3'b000: ALUResult = num1 + num2;  // ADD
@@ -73,11 +73,11 @@ module ALU(
                     3'b111: ALUResult = num1 & num2;  // AND
                 endcase
             end
-            2'b01: begin  // 减法
+            3'b001: begin  // 减法
                 zero=1'b0;
-                ALUResult = num1 - num2;  // SUB
+                ALUResult = num1 + num2;  // lw,sw
             end
-            2'b10: begin  // 比较
+            3'b010: begin  // 比较
                 ALUResult=32'h0;
                 case (funct3)
                     3'b000: zero = (num1 == num2);  // BEQ
@@ -88,6 +88,18 @@ module ALU(
                     3'b111: zero = ($signed(num1) >= $signed(num2));  // BGEU
                     default: zero = 1'b0;
                 endcase
+            end
+            3'b011:begin//J type
+                zero=1'b1;
+                ALUResult=pc+4;
+            end
+            3'b100:begin//lui
+                zero=1'b0;
+                ALUResult=num2;
+            end
+            3'b101:begin//auipc
+                zero=1'b0;
+                ALUResult=num1+num2;
             end
             default: begin
                 ALUResult = 32'h0;

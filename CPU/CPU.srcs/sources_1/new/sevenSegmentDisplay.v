@@ -95,7 +95,7 @@ module sevenSegmentDisplay(
             4'd12: seg = ~8'hC6;    // 'C'
             4'd13: seg = ~8'hA1;    // 'D' 
             4'd14: seg = ~8'h86;    // 'E'
-            4'd15: seg = ~8'hEF;    // 'F'
+            4'd15: seg = ~8'h8E;    // 'F'
             
             default: seg = ~8'hFF;  // Turn off all segments if invalid
         endcase

@@ -2,13 +2,8 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-<<<<<<< HEAD
-# Start of session at: Fri May 23 21:34:19 2025
-# Process ID: 28540
-=======
-# Start of session at: Fri May 23 18:55:19 2025
-# Process ID: 24144
->>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
+# Start of session at: Wed May 28 22:42:26 2025
+# Process ID: 24856
 # Current directory: F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.runs/impl_1
 # Command line: vivado.exe -log CPU_top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source CPU_top.tcl -notrace
 # Log file: F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.runs/impl_1/CPU_top.vdi

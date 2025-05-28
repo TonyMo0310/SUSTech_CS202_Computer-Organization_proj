@@ -51,19 +51,18 @@ module CPU_top(
     wire [31:0] pc;
     wire ALUsrc;
     wire PCtoALU;
-    wire [1:0] ALUOp;
+    wire [2:0] ALUOp;
     wire [31:0] ALUResult;
     wire [31:0] IOin;
     wire [31:0] IOout;
     wire memtoReg;
+    wire regtoPC;
+    wire memRead;
     wire [2:0] memOp;
     wire clk;
     wire upg_clk;
-<<<<<<< HEAD
     wire pause;    
     wire confirm;
-=======
->>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
     // UART 相关信号
     wire upg_clk_o;
     wire upg_wen_o;
@@ -82,7 +81,6 @@ module CPU_top(
      //used for other modules which don't relate to UART
      wire rst;      
     assign rst = !(!fpga_rst | !upg_rst);
-<<<<<<< HEAD
     assign led=IOout[7:0];
     debounce debounce(
         .clk(fpga_clk),
@@ -90,16 +88,12 @@ module CPU_top(
         .btn_in(confirmBottom),
         .btn_out(confirm)
     );
-=======
-    
-    assign led=IOout[7:0];
-    
->>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
-    cpuclk cpuclk(
-        .clk_in1(fpga_clk),
-        .clk_out1(clk),
-        .clk_out2(upg_clk)
+    ClkDiv ClkDiv(
+        .clk_in(fpga_clk),
+        .clk_out(clk),
+        .rst(rst)
     );
+    assign upg_clk=clk;
     // 实例化 IFetch 模块
     IFetch ifetch (
         .clk(clk),
@@ -108,11 +102,13 @@ module CPU_top(
         .zero(zero),          
         .imm32(imm),
         .pc(pc),        
-        .IFen(IFen)
+        .IFen(IFen),
+        .regtoPC(regtoPC),
+        .readData1(readData1)
     );
     programrom programrom (
       // Program ROM Pinouts
-      .rom_clk_i        (upg_clk_o),       // input rom_clk_i
+      .rom_clk_i        (clk),       // input rom_clk_i
       .rom_adr_i        (pc[15:2]),       // input [13:0] rom_adr_i
       .instruction      (instruction),       // output [31:0] instruction
       
@@ -142,14 +138,14 @@ module CPU_top(
     control control (
         .opcode(instruction[6:0]),
         .branch(branch),
-        .memRead(),
+        .memRead(memRead),
         .memtoReg(memtoReg),
         .ALUop(ALUOp),
         .memWrite(memWrite),
         .ALUsrc(ALUsrc),
         .regWrite(regWrite),
         .PCtoALU(PCtoALU),
-        .regtoPC()
+        .regtoPC(regtoPC)
     );
 
     regWriteMUX regWriteMUX(
@@ -165,16 +161,14 @@ module CPU_top(
         .memOp(instruction[14:12]),
         .readData(readData),
         .memWrite(memWrite),
+        .memRead(memRead),
         .writeData(readData2),
         .clk(clk),
         .rst(rst),
         .IOin(IOin),
         .IOout(IOout),
         .MEMen(MEMen),
-<<<<<<< HEAD
         .pause(pause),
-=======
->>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
         //UART相关端口
         .upg_rst_i(upg_rst),
         .upg_clk_i(upg_clk_o),
@@ -212,7 +206,7 @@ module CPU_top(
     
     // 七段显示模块实例化
     sevenSegmentDisplay sevenSegmentDisplay (
-        .clk(clk),
+        .clk(fpga_clk),
         .rst(rst),
         .IOout(IOout),
         .seg(seg),

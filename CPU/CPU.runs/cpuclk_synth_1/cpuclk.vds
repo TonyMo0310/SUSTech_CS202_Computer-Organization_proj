@@ -2,13 +2,8 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-<<<<<<< HEAD
 # Start of session at: Fri May 23 20:13:18 2025
 # Process ID: 31868
-=======
-# Start of session at: Fri May 23 18:53:52 2025
-# Process ID: 23140
->>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 # Current directory: F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.runs/cpuclk_synth_1
 # Command line: vivado.exe -log cpuclk.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source cpuclk.tcl
 # Log file: F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.runs/cpuclk_synth_1/cpuclk.vds
@@ -20,15 +15,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-<<<<<<< HEAD
 INFO: Helper process launched with PID 28656 
 ---------------------------------------------------------------------------------
 Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 341.836 ; gain = 100.309
-=======
-INFO: Helper process launched with PID 27060 
----------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 341.848 ; gain = 100.152
->>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'cpuclk' [f:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk.v:71]
 INFO: [Synth 8-638] synthesizing module 'cpuclk_clk_wiz' [f:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk_clk_wiz.v:69]
@@ -41,7 +30,6 @@ INFO: [Synth 8-638] synthesizing module 'IBUF' [E:/software/Xilinx/Vivado/2017.4
 INFO: [Synth 8-256] done synthesizing module 'IBUF' (1#1) [E:/software/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:19468]
 INFO: [Synth 8-638] synthesizing module 'PLLE2_ADV' [E:/software/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:40051]
 	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
-<<<<<<< HEAD
 	Parameter CLKFBOUT_MULT bound to: 42 - type: integer 
 	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: float 
 	Parameter CLKIN1_PERIOD bound to: 10.000000 - type: float 
@@ -50,16 +38,6 @@ INFO: [Synth 8-638] synthesizing module 'PLLE2_ADV' [E:/software/Xilinx/Vivado/2
 	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: float 
 	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: float 
 	Parameter CLKOUT1_DIVIDE bound to: 84 - type: integer 
-=======
-	Parameter CLKFBOUT_MULT bound to: 44 - type: integer 
-	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: float 
-	Parameter CLKIN1_PERIOD bound to: 10.000000 - type: float 
-	Parameter CLKIN2_PERIOD bound to: 0.000000 - type: float 
-	Parameter CLKOUT0_DIVIDE bound to: 11 - type: integer 
-	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: float 
-	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: float 
-	Parameter CLKOUT1_DIVIDE bound to: 88 - type: integer 
->>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: float 
 	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: float 
 	Parameter CLKOUT2_DIVIDE bound to: 1 - type: integer 
@@ -88,11 +66,7 @@ INFO: [Synth 8-256] done synthesizing module 'BUFG' (3#1) [E:/software/Xilinx/Vi
 INFO: [Synth 8-256] done synthesizing module 'cpuclk_clk_wiz' (4#1) [f:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk_clk_wiz.v:69]
 INFO: [Synth 8-256] done synthesizing module 'cpuclk' (5#1) [f:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk.v:71]
 ---------------------------------------------------------------------------------
-<<<<<<< HEAD
 Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 394.410 ; gain = 152.883
-=======
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 394.492 ; gain = 152.797
->>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -102,11 +76,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-<<<<<<< HEAD
 Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 394.410 ; gain = 152.883
-=======
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 394.492 ; gain = 152.797
->>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -131,43 +101,26 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-<<<<<<< HEAD
 Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.003 . Memory (MB): peak = 636.941 ; gain = 0.000
 ---------------------------------------------------------------------------------
 Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 636.941 ; gain = 395.414
-=======
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 636.980 ; gain = 0.000
----------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 636.980 ; gain = 395.285
->>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcsg324-1
 ---------------------------------------------------------------------------------
-<<<<<<< HEAD
 Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 636.941 ; gain = 395.414
-=======
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 636.980 ; gain = 395.285
->>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property DONT_TOUCH = true for inst. (constraint file  F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.runs/cpuclk_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-<<<<<<< HEAD
 Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 636.941 ; gain = 395.414
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 636.941 ; gain = 395.414
-=======
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 636.980 ; gain = 395.285
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 636.980 ; gain = 395.285
->>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -202,11 +155,7 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-<<<<<<< HEAD
 Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 636.941 ; gain = 395.414
-=======
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 636.980 ; gain = 395.285
->>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -218,21 +167,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-<<<<<<< HEAD
 Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 692.266 ; gain = 450.738
-=======
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 690.270 ; gain = 448.574
->>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-<<<<<<< HEAD
 Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 692.340 ; gain = 450.812
-=======
-Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 690.270 ; gain = 448.574
->>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -244,11 +185,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-<<<<<<< HEAD
 Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 702.168 ; gain = 460.641
-=======
-Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 700.324 ; gain = 458.629
->>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -272,11 +209,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-<<<<<<< HEAD
 Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 702.168 ; gain = 460.641
-=======
-Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 700.324 ; gain = 458.629
->>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -289,11 +222,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-<<<<<<< HEAD
 Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 702.168 ; gain = 460.641
-=======
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 700.324 ; gain = 458.629
->>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -305,41 +234,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-<<<<<<< HEAD
 Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 702.168 ; gain = 460.641
-=======
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 700.324 ; gain = 458.629
->>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-<<<<<<< HEAD
 Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 702.168 ; gain = 460.641
-=======
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 700.324 ; gain = 458.629
->>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-<<<<<<< HEAD
 Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 702.168 ; gain = 460.641
-=======
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 700.324 ; gain = 458.629
->>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-<<<<<<< HEAD
 Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 702.168 ; gain = 460.641
-=======
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 700.324 ; gain = 458.629
->>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -368,19 +281,11 @@ Report Instance Areas:
 |2     |  inst   |cpuclk_clk_wiz |     5|
 +------+---------+---------------+------+
 ---------------------------------------------------------------------------------
-<<<<<<< HEAD
 Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 702.168 ; gain = 460.641
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
 Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 702.168 ; gain = 218.109
 Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 702.168 ; gain = 460.641
-=======
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 700.324 ; gain = 458.629
----------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 700.324 ; gain = 216.141
-Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 700.324 ; gain = 458.629
->>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -392,19 +297,10 @@ No Unisim elements were transformed.
 INFO: [Common 17-83] Releasing license: Synthesis
 25 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-<<<<<<< HEAD
 synth_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 715.293 ; gain = 484.230
-=======
-synth_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 708.949 ; gain = 477.773
->>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
 INFO: [Common 17-1381] The checkpoint 'F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.runs/cpuclk_synth_1/cpuclk.dcp' has been generated.
 INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP f:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk.xci
 INFO: [Common 17-1381] The checkpoint 'F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.runs/cpuclk_synth_1/cpuclk.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file cpuclk_utilization_synth.rpt -pb cpuclk_utilization_synth.pb
-<<<<<<< HEAD
 report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 719.770 ; gain = 0.000
 INFO: [Common 17-206] Exiting Vivado at Fri May 23 20:13:38 2025...
-=======
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 708.949 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Fri May 23 18:54:12 2025...
->>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f

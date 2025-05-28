@@ -24,6 +24,7 @@ module DataMem(
     input [2:0] memOp,             // Memory operation from funct3 (instruction[14:12])
     output reg [31:0] readData,    // Data read from memory
     input memWrite,                // Write enable
+    input memRead,
     input [31:0] writeData,        // Data to write
     input [31:0] IOin,             // IO input
     output reg [31:0] IOout,       // IO output
@@ -50,7 +51,7 @@ module DataMem(
     always @* begin
         if (address == IOaddress) begin
             readData = IOin;       // IO read (word only)
-            pause=memWrite;
+            pause=memRead;
         end else begin
             pause=1'b0;
             case (memOp)

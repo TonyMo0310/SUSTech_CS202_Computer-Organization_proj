@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-<GenRun Id="synth_1" LaunchPart="xc7a35tcsg324-1" LaunchTime="1748007194">
-=======
-<GenRun Id="synth_1" LaunchPart="xc7a35tcsg324-1" LaunchTime="1747997659">
->>>>>>> b42b803b8728acc44a8e6860d387ef788439fa4f
+<GenRun Id="synth_1" LaunchPart="xc7a35tcsg324-1" LaunchTime="1748443290">
   <File Type="PA-TCL" Name="CPU_top.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="CPU_top_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="CPU_top_reports.tcl"/>
@@ -22,13 +18,6 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/ip/prgrom/prgrom.xci">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/imports/Downloads/ALU.v">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../Downloads/ALU.v"/>
@@ -39,6 +28,13 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/CPU_state.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/ClkDiv.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -159,6 +155,12 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/ip/prgrom/test.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="CPU_top"/>
@@ -182,5 +184,5 @@
     <Step Id="synth_design"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="uart_bmpg_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="cpuclk"/>
+  <BlockFileSet Type="BlockSrcs" Name="prgrom"/>
 </GenRun>
