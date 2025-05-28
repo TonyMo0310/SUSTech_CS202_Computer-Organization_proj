@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date             : Wed May 28 22:22:22 2025
+| Date             : Wed May 28 22:43:06 2025
 | Host             : DESKTOP-NV7NN3N running 64-bit major release  (build 9200)
 | Command          : report_power -file CPU_top_power_routed.rpt -pb CPU_top_power_summary_routed.pb -rpx CPU_top_power_routed.rpx
 | Design           : CPU_top
@@ -54,14 +54,14 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | Clocks                  |    <0.001 |        3 |       --- |             --- |
 | Slice Logic             |     0.011 |     4157 |       --- |             --- |
-|   LUT as Logic          |     0.011 |     1808 |     20800 |            8.69 |
+|   LUT as Logic          |     0.011 |     1806 |     20800 |            8.68 |
 |   CARRY4                |    <0.001 |       84 |      8150 |            1.03 |
 |   F7/F8 Muxes           |    <0.001 |      351 |     32600 |            1.08 |
 |   Register              |    <0.001 |     1527 |     41600 |            3.67 |
 |   BUFG                  |    <0.001 |        4 |        32 |           12.50 |
 |   LUT as Shift Register |    <0.001 |       10 |      9600 |            0.10 |
 |   Others                |     0.000 |      130 |       --- |             --- |
-| Signals                 |     0.019 |     3412 |       --- |             --- |
+| Signals                 |     0.018 |     3410 |       --- |             --- |
 | Block RAM               |     0.001 |       29 |        50 |           58.00 |
 | I/O                     |     0.002 |       48 |       210 |           22.86 |
 | Static Power            |     0.073 |          |           |                 |
@@ -189,8 +189,8 @@ Table of Contents
 |     ck_div                                                                      |    <0.001 |
 |     dff1                                                                        |     0.000 |
 |     dff2                                                                        |     0.000 |
-|   decoder                                                                       |     0.009 |
-|     dut1                                                                        |     0.009 |
+|   decoder                                                                       |     0.010 |
+|     dut1                                                                        |     0.010 |
 |   ifetch                                                                        |    <0.001 |
 |   programrom                                                                    |     0.013 |
 |     urom                                                                        |     0.004 |
