@@ -292,9 +292,15 @@ case3:
     li a1, 9
     li a7, 8
     ecall
-    jal convert_binary
-    slli s0, a0, 4
+    jal validate_8bit_input
+    bnez a1, case3_error
     
+    la a0, buffer
+    jal convert_binary
+    jal convert
+    mv s0, a0
+    
+    # Prompt and process second number
     la a0, case3_prompt2
     li a7, 4
     ecall
@@ -302,15 +308,11 @@ case3:
     li a1, 9
     li a7, 8
     ecall
+    jal validate_8bit_input
+    bnez a1, case3_error
+    
+    la a0, buffer
     jal convert_binary
-    slli s1, a0, 4
-    
-    # Convert numbers
-    mv a0, s0
-    jal convert
-    mv s0, a0
-    
-    mv a0, s1
     jal convert
     mv s1, a0
     
@@ -321,7 +323,20 @@ case3:
     add a0, s0, s1
     li a7, 1
     ecall
+    la a0, newline
+    li a7, 4
+    ecall
     
+    lw ra, 8(sp)
+    lw s0, 4(sp)
+    lw s1, 0(sp)
+    addi sp, sp, 12
+    ret
+
+case3_error:
+    la a0, case1_error
+    li a7, 4
+    ecall
     lw ra, 8(sp)
     lw s0, 4(sp)
     lw s1, 0(sp)
@@ -569,18 +584,52 @@ cdone:
 
 # ------------------------- Convert Function -------------------------
 convert:
-    srli t0, a0, 11        # Sign bit
-    andi t0, t0, 1
-    srli t1, a0, 8         # Exponent
-    andi t1, t1, 0x7
-    srli t2, a0, 4         # Mantissa
-    andi t2, t2, 0xF
-    li t3, 1
-    sll t3, t3, t1         # 2^exponent
-    mul a0, t2, t3         # Mantissa * 2^exponent
+    addi sp, sp, -16
+    sw ra, 12(sp)
+    sw t0, 8(sp)
+    sw t1, 4(sp)
+    sw t2, 0(sp)
+
+    # Extract sign, exponent, and mantissa
+    srli t0, a0, 7          # Sign bit (bit 7)
+    andi t0, t0, 1          # t0 = sign (0 or 1)
+    srli t1, a0, 4          # Exponent (bits 4-6)
+    andi t1, t1, 0x7        # t1 = exponent (0 to 7)
+    andi t2, a0, 0xF        # Mantissa (bits 0-3, lower 4 bits are 0)
+    
+    # Compute mantissa: 1 + (mantissa_bits / 16)
+    li a0, 16               # Base for mantissa (2^4)
+    mul t2, t2, a0         # Shift mantissa left by 4 (simulate 1.mantissa)
+    addi t2, t2, 16        # Add implicit 1 (1.0 = 16 in fixed-point)
+    
+    # Adjust exponent: exponent - bias (bias = 3)
+    addi t1, t1, -3        # t1 = exponent - 3
+    
+    # Compute value: mantissa * 2^exponent
+    mv a0, t2
+    mv t3, t1
+    beqz t3, skip_shift     # Skip shift if exponent is 0
+    bgtz t3, positive_shift
+    neg t3, t3             # Make shift amount positive
+    srl a0, a0, t3         # Right shift for negative exponent
+    j apply_sign
+positive_shift:
+    sll a0, a0, t3         # Left shift for positive exponent
+skip_shift:
+apply_sign:
+    # Apply sign
     beqz t0, pos
     neg a0, a0
 pos:
+    # Convert to integer (truncate toward zero)
+    # Since we used fixed-point (mantissa * 16), divide by 16
+    srai a0, a0, 4         # Divide by 16 to get integer part
+    
+    lw ra, 12(sp)
+    lw t0, 8(sp)
+    lw t1, 4(sp)
+    lw t2, 0(sp)
+    addi sp, sp, 16
     ret
 
 # ------------------------- Read Binary Input -------------------------
