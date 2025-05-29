@@ -25,8 +25,9 @@ module CPU_top(
     output [7:0] seg,
     output [7:0] seg1,
     output [7:0] an,
-    input [7:0] sw,
-    input [1:0] choose,
+    input [7:0] l_sw,
+    input [2:0] r_sw,
+    input displayMode,
     output [7:0]led,        //控制LED灯，由IOout低位控制
     input start_pg,          //串口输入开关
     input uart_rx,          // 串口输入
@@ -63,6 +64,7 @@ module CPU_top(
     wire upg_clk;
     wire pause;    
     wire confirm;
+    wire [39:0]bcd_value;
     // UART 相关信号
     wire upg_clk_o;
     wire upg_wen_o;
@@ -203,12 +205,17 @@ module CPU_top(
         .ALUResult(ALUResult),
         .zero(zero)
     );
-    
+    //32位IO输出转40位BCD码
+    IOtoBCD IOtoBCD(
+        .IOout(IOout),
+        .bcd(bcd_value),
+        .displayMode(displayMode)
+    );
     // 七段显示模块实例化
     sevenSegmentDisplay sevenSegmentDisplay (
         .clk(fpga_clk),
         .rst(rst),
-        .IOout(IOout),
+        .values(bcd_value),
         .seg(seg),
         .seg1(seg1),
         .an(an)
@@ -218,8 +225,8 @@ module CPU_top(
     switchInput switchInput (
         .clk(clk),
         .rst(rst),
-        .sw(sw),
-        .choose(choose),
+        .l_sw(l_sw),
+        .r_sw(r_sw),
         .IOin(IOin)
     );
     
