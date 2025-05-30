@@ -28,8 +28,9 @@ module CPU_top_tb(
     wire [7:0] seg;
     wire [7:0] seg1;
     wire [7:0] an;
-    reg [7:0] sw;
-    reg[1:0] choose;
+    reg [7:0] l_sw;
+    reg[2:0] r_sw;
+    reg displayMode;
     wire [7:0]led;        //控制LED灯，由IOout低位控制
     reg start_pg;          //串口输入开关
     reg uart_rx;          // 串口输入
@@ -42,8 +43,9 @@ module CPU_top_tb(
     .seg(seg),
     .seg1(seg1),
     .an(an),
-    .sw(sw),
-    .choose(choose),
+    .l_sw(l_sw),
+    .r_sw(r_sw),
+    .displayMode(displayMode),
     .led(led),
     .start_pg(start_pg),
     .uart_rx(uart_rx),
@@ -53,8 +55,9 @@ module CPU_top_tb(
     initial begin
     fpga_clk=1'b0;
     fpga_rst=1'b0;
-    sw=7'b0101010;
-    choose=2'b00;
+    l_sw=7'b0101010;
+    r_sw=3'b000;
+    displayMode=1'b0;
     start_pg=1'b0;
     uart_rx=1'b0;
     confirmBottom=1'b0;

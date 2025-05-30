@@ -30,7 +30,8 @@ module control(
     output reg ALUsrc,//0 is from reg,1 is from imm
     output reg regWrite,
     output reg PCtoALU,
-    output reg regtoPC
+    output reg regtoPC,
+    output reg hasFun7
     );
     always@*
     begin
@@ -45,6 +46,7 @@ module control(
        regWrite=1'b1;
        PCtoALU=1'b0;
        regtoPC=1'b0;
+       hasFun7=1'b0;
       end
       7'b110_0111:begin //jarl
         branch=1'b1;
@@ -56,6 +58,7 @@ module control(
         regWrite=1'b1;
         PCtoALU=1'b1;
         regtoPC=1'b1;
+        hasFun7=1'b0;
       end
       7'b001_0011:begin//addi,slli,slti,sltiu,xori,srli,srai,ori,andi
         branch=1'b0;
@@ -67,6 +70,7 @@ module control(
         regWrite=1'b1;
         PCtoALU=1'b0;
         regtoPC=1'b0;
+        hasFun7=1'b0;
       end
       7'b010_0011:begin//sb,sh,sw,sd
         branch=1'b0;
@@ -78,17 +82,19 @@ module control(
         regWrite=1'b0;
         PCtoALU=1'b0;
         regtoPC=1'b0;
+        hasFun7=1'b0;
       end
       7'b011_0011:begin//add.sub.sll.slt.sltu.xor,sri,sra,or,and
         branch=1'b0;
         memRead=1'b0;
         memtoReg=1'b0;
-        ALUop=3'b001;
+        ALUop=3'b000;
         memWrite=1'b0;
         ALUsrc=1'b0;
         regWrite=1'b1;
         PCtoALU=1'b0;
         regtoPC=1'b0;
+        hasFun7=1'b1;
       end
       7'b110_0011:begin//beq,bne,blt,bge,bltu,bgeu
         branch=1'b1;
@@ -100,6 +106,7 @@ module control(
         regWrite=1'b0;
         PCtoALU=1'b0;
         regtoPC=1'b0;
+        hasFun7=1'b0;
       end
       7'b001_0111:begin//auipc
         branch=1'b0;
@@ -111,6 +118,7 @@ module control(
         regWrite=1'b1;
         PCtoALU=1'b1;
         regtoPC=1'b0;
+        hasFun7=1'b0;
       end
       7'b011_0111:begin//lui
         branch=1'b0;
@@ -122,6 +130,7 @@ module control(
         regWrite=1'b1;
         PCtoALU=1'b0;
         regtoPC=1'b0;
+        hasFun7=1'b0;
       end
       7'b110_1111:begin//jal
         branch=1'b1;
@@ -133,6 +142,7 @@ module control(
         regWrite=1'b1;
         PCtoALU=1'b1;
         regtoPC=1'b0;
+        hasFun7=1'b0;
       end
       default:begin
         branch=1'b0;
@@ -144,6 +154,7 @@ module control(
         regWrite=1'b0;
         PCtoALU=1'b0;
         regtoPC=1'b0;
+        hasFun7=1'b0;
       end
      endcase
     end

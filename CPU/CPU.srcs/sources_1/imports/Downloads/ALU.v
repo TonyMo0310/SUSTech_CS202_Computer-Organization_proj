@@ -30,14 +30,19 @@ module ALU(
     input [2:0] funct3,
     input [6:0] funct7,
     input [31:0] pc,
+    input hasFun7,
     output reg [31:0] ALUResult,
     output reg zero
 );
     reg [31:0] num1;
     reg [31:0] num2;
-
+    reg [6:0]f7;
     // 选择ALU操作�?
     always @* begin
+        if(hasFun7)
+            f7=funct7;
+        else
+            f7=7'h0;
         if (ALUSrc) begin
             num2 = imm32;  // 如果ALUSrc�?1，使用立即数
         end else begin
@@ -57,13 +62,19 @@ module ALU(
             3'b000: begin  // 加法或�?�辑运算
                 zero=1'b0;
                 case (funct3)
-                    3'b000: ALUResult = num1 + num2;  // ADD
+                    3'b000: begin
+                        if(f7==7'b0000000)begin
+                            ALUResult = num1 + num2;  // ADD
+                        end else begin
+                            ALUResult = num1 - num2; // SUB
+                        end
+                    end
                     3'b001: ALUResult = num1 << num2[4:0];  // SLL
                     3'b010: ALUResult = num1 >> num2[4:0];  // SLT
                     3'b011: ALUResult = num1 >>> num2[4:0];  // SLTU
                     3'b100: ALUResult = num1 ^ num2;  // XOR
                     3'b101: begin
-                        if (funct7 == 7'b0100000) begin
+                        if (f7 == 7'b0100000) begin
                             ALUResult = num1 >>> num2[4:0];  // SRA
                         end else begin
                             ALUResult = num1 >> num2[4:0];  // SRL

@@ -59,6 +59,7 @@ module CPU_top(
     wire memtoReg;
     wire regtoPC;
     wire memRead;
+    wire hasFun7;
     wire [2:0] memOp;
     wire clk;
     wire upg_clk;
@@ -84,12 +85,16 @@ module CPU_top(
      wire rst;      
     assign rst = !(!fpga_rst | !upg_rst);
     assign led=IOout[7:0];
+    /*
     debounce debounce(
         .clk(fpga_clk),
         .rst(rst),
         .btn_in(confirmBottom),
         .btn_out(confirm)
     );
+    */
+    assign confirm=confirmBottom;//JUST FOR DEBUG :)
+   
     ClkDiv ClkDiv(
         .clk_in(fpga_clk),
         .clk_out(clk),
@@ -147,7 +152,8 @@ module CPU_top(
         .ALUsrc(ALUsrc),
         .regWrite(regWrite),
         .PCtoALU(PCtoALU),
-        .regtoPC(regtoPC)
+        .regtoPC(regtoPC),
+        .hasFun7(hasFun7)
     );
 
     regWriteMUX regWriteMUX(
@@ -202,6 +208,7 @@ module CPU_top(
         .funct3(instruction[14:12]),
         .funct7(instruction[31:25]),
         .pc(pc),
+        .hasFun7(hasFun7),
         .ALUResult(ALUResult),
         .zero(zero)
     );
