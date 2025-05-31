@@ -85,15 +85,15 @@ module CPU_top(
      wire rst;      
     assign rst = !(!fpga_rst | !upg_rst);
     assign led=IOout[7:0];
-    /*
+    
     debounce debounce(
         .clk(fpga_clk),
         .rst(rst),
         .btn_in(confirmBottom),
         .btn_out(confirm)
     );
-    */
-    assign confirm=confirmBottom;//JUST FOR DEBUG :)
+    
+    //assign confirm=confirmBottom;//JUST FOR DEBUG :)
    
     ClkDiv ClkDiv(
         .clk_in(fpga_clk),

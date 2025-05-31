@@ -16,7 +16,10 @@ integer i;
 always@(posedge clk or negedge rst)//存入和重置
 begin
  if(!rst)begin
-  for (i = 0; i < 32; i = i + 1)
+  for (i = 0; i < 2; i = i + 1)
+   registers[i] <= 32'h0;
+  registers[2]=32'b0000_0000_0000_0000_1111_1111_1111_1000;//特殊处理sp寄存器
+  for (i = 3; i < 32; i = i + 1)
    registers[i] <= 32'h0;
  end else begin
  if (regWrite&&WBen) begin   // 写使能有效时触发写入
