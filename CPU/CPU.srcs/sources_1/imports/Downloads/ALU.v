@@ -70,8 +70,8 @@ module ALU(
                         end
                     end
                     3'b001: ALUResult = num1 << num2[4:0];  // SLL
-                    3'b010: ALUResult = num1 >> num2[4:0];  // SLT
-                    3'b011: ALUResult = num1 >>> num2[4:0];  // SLTU
+                    3'b010: ALUResult = ($signed(num1) < $signed(num2));  // SLT
+                    3'b011: ALUResult = (num1 < num2);  // SLTU
                     3'b100: ALUResult = num1 ^ num2;  // XOR
                     3'b101: begin
                         if (f7 == 7'b0100000) begin

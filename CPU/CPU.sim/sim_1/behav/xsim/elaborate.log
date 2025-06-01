@@ -9,7 +9,11 @@ Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.clock_divider
+Compiling module xil_defaultlib.D_Flip_Flop
+Compiling module xil_defaultlib.debounce
 Compiling module xil_defaultlib.ClkDiv
+Compiling module xil_defaultlib.ClkDiv2
 Compiling module xil_defaultlib.IFetch
 Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_output_stage(...
 Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_softecc_outpu...

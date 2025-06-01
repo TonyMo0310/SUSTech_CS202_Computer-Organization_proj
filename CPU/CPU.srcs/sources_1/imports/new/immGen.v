@@ -24,7 +24,7 @@ module immGen(
                     immediate={19'b00000_00000_00000_0000,instruction[31],instruction[7],instruction[30:25],instruction[11:8],1'b0};
             end
             7'b0010111,7'b0110111://U type
-                immediate={instruction[31:12],10'b00000_00000};
+                immediate={instruction[31:12],12'b00_00000_00000};
             7'b1101111:begin//UJ type
                 if(instruction[31])
                     immediate={11'b11111_11111_1,instruction[31],instruction[19:12],instruction[20],instruction[30:21],1'b0};

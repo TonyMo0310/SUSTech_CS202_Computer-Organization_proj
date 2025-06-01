@@ -18,14 +18,22 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "F:/ComputerOrganization/SUSTech_CS2
 INFO: [VRFC 10-311] analyzing module CPU_top
 INFO: [VRFC 10-2263] Analyzing Verilog file "F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/new/ClkDiv.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module ClkDiv
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/new/ClkDiv2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ClkDiv2
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/new/D_Flip_Flop.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module D_Flip_Flop
 INFO: [VRFC 10-2263] Analyzing Verilog file "F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/new/DataMem.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module DataMem
 INFO: [VRFC 10-2263] Analyzing Verilog file "F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/imports/Downloads/IFetch.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module IFetch
 INFO: [VRFC 10-2263] Analyzing Verilog file "F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/new/IOtoBCD.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module IOtoBCD
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/new/clock_divider.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clock_divider
 INFO: [VRFC 10-2263] Analyzing Verilog file "F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/imports/new/control.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module control
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/new/debounce.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module debounce
 INFO: [VRFC 10-2263] Analyzing Verilog file "F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/imports/new/decoder.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module decoder
 INFO: [VRFC 10-2263] Analyzing Verilog file "F:/ComputerOrganization/SUSTech_CS202_Computer-Organization_proj/CPU/CPU.srcs/sources_1/imports/new/immGen.v" into library xil_defaultlib

@@ -10,10 +10,14 @@ verilog xil_defaultlib  \
 "../../../../CPU.srcs/sources_1/new/CPU_state.v" \
 "../../../../CPU.srcs/sources_1/new/CPU_top.v" \
 "../../../../CPU.srcs/sources_1/new/ClkDiv.v" \
+"../../../../CPU.srcs/sources_1/new/ClkDiv2.v" \
+"../../../../CPU.srcs/sources_1/new/D_Flip_Flop.v" \
 "../../../../CPU.srcs/sources_1/new/DataMem.v" \
 "../../../../CPU.srcs/sources_1/imports/Downloads/IFetch.v" \
 "../../../../CPU.srcs/sources_1/new/IOtoBCD.v" \
+"../../../../CPU.srcs/sources_1/new/clock_divider.v" \
 "../../../../CPU.srcs/sources_1/imports/new/control.v" \
+"../../../../CPU.srcs/sources_1/new/debounce.v" \
 "../../../../CPU.srcs/sources_1/imports/new/decoder.v" \
 "../../../../CPU.srcs/sources_1/imports/new/immGen.v" \
 "../../../../CPU.srcs/sources_1/new/programrom.v" \

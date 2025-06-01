@@ -97,10 +97,14 @@ module CPU_top(
    
     ClkDiv ClkDiv(
         .clk_in(fpga_clk),
-        .clk_out(clk),
-        .rst(rst)
+        .clk_out(upg_clk),
+        .rst(fpga_rst)
     );
-    assign upg_clk=clk;
+    ClkDiv2 ClkDiv2(
+        .clk_in(fpga_clk),
+        .clk_out(clk),
+        .rst(fpga_rst)
+    );
     // ÊµÀý»¯ IFetch Ä£¿é
     IFetch ifetch (
         .clk(clk),
